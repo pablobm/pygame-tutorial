@@ -28,6 +28,18 @@ Let's try step by step. Write a program that does the following:
 4. Loads an image
 5. Draws the image on the screen 100 times, in different positions
 
+## Deleting the previous frame
+
+If you did everything correctly, you should have an image moving across the screen, but leaving a "wake" behind it. How can we avoid this?
+
+The problem here is that we are drawing on top of the previous screen. Instead, we need to make sure that the screen is deleted before we start painting a new frame. You can use the following piece of code, which paints the whole screen black:
+
+```python
+screen.fill((0,0,0))
+```
+
+Where do you think that line should go?
+
 ## Challenges
 
 * Get the image moving horizontally
