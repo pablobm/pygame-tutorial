@@ -47,3 +47,5 @@ Where do you think that line should go?
 * Get the image moving diagonally
 * Any one of the above, but faster
 * Get the image to start from the bottom right corner and move up
+* Get the two identical images moving on the screen in different directions
+* Get two diffent images moving on the screen in different directions
