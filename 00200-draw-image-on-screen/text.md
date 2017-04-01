@@ -25,7 +25,7 @@ time.sleep(5)
 
 It's time to draw an image on the screen. Find one you would like to draw, and put the file in the same folder as the code.
 
-First we need to get hold of the screen. When we create a a screen (a window) with `set_mode`, the function "returns" a screen. This means we can create a variable and store the screen there. Modify the code to do this:
+First we need to get hold of the screen. When we create a a screen (a window) with `set_mode`, the function "returns" a screen. This means we can create a variable and store the screen there. **Modify** the existing code to do this when it creates the window:
 
 ```python
 screen = pygame.display.set_mode([800, 600])
@@ -57,7 +57,7 @@ Notice that `blit` lives inside `screen`. "Blit" is a technical term, don't worr
 
 There's one last hitch. Pygame doesn't show things on screen as you draw them. Instead it waits until you tell it to do it. This can be a bit annoying at first, but it is much faster because it allows the computer to do less work.
 
-Once you have drawn the image on the screen, you tell pygame that the screen is ready by running this code:
+Once you have drawn the image on the screen, you tell Pygame that the screen is ready by running this code:
 
 ```python
 pygame.display.flip()
