@@ -3,7 +3,7 @@
 In the previous section, we used the following code to fill the screen black before painting a new frame:
 
 ```python
-screen.fill((0,0,0))
+screen.fill([0,0,0])
 ```
 
 That line tells the screen to fill in the colour black. The numbers `(0, 0, 0)` represent the colour black, but what do the numbers have to do with the colour?
@@ -14,9 +14,9 @@ This way of representing colours with numbers is called RGB, standing for Red, G
 
 In terms of RGB, "pure" red will only have red. "Pure" green will only have green. "Pure" blue will only have blue. This is how to represent those colours with numbers:
 
-* Red: `(255, 0, 0)`
-* Green: `(0, 255, 0)`
-* Blue: `(0, 0, 255)`
+* Red: `[255, 0, 0]`
+* Green: `[0, 255, 0]`
+* Blue: `[0, 0, 255]`
 
 ## Challenges
 
@@ -34,11 +34,11 @@ each of the three numbers must be between 0 and 255. By the way, the number 255 
 
 To get other colours, we mix red, green and blue. For example:
 
-* Yellow: `(255, 255, 0)`
-* Magenta: `(255, 0, 255)`
-* Cyan: `(0, 255, 255)`
-* Brown: `(80, 40, 25)`
-* Pink: `(255, 200, 200)`
+* Yellow: `[255, 255, 0]`
+* Magenta: `[255, 0, 255]`
+* Cyan: `[0, 255, 255]`
+* Brown: `[80, 40, 25]`
+* Pink: `[255, 200, 200]`
 
 ## Challenges
 
@@ -53,9 +53,9 @@ To avoid typing down the numbers every time, you can give names to colours
 . For example:
 
 ```python
-BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
+BLACK = [0, 0, 0]
+RED = [255, 0, 0]
+GREEN = [0, 255, 0]
 # etc...
 ```
 
