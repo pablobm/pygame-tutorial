@@ -4,7 +4,7 @@ Let's draw something on the screen, as well as keep the screen open for a few se
 
 ## Waiting
 
-To make Python wait a bit, we need to load a library that gives us that ability. This one is called `time`, and includes code to help us deal with time. For example, to make the program wait for a time. We can import it like this:
+To make Python wait a bit, we need to load a library that gives us that ability. The one we need now is called `time`, and includes code to help us deal with time. We can import it like this:
 
 ```python
 import time
@@ -23,15 +23,15 @@ time.sleep(5)
 
 ## Getting hold of the screen
 
-It's time to draw an image on the screen. Find one you would like to draw, and put the file in the same folder as the code.
+It's time to draw an image on the screen. Find an image you would like to draw, and put the file in the same folder as the code.
 
-First we need to get hold of the screen. When we create a a screen (a window) with `set_mode`, the function "returns" a screen. This means we can create a variable and store the screen there. **Modify** the existing code to do this when it creates the window:
+First we need to get hold of the screen. When we create a screen (a window) with `set_mode`, the function "returns" a screen. This means we can create a variable and store the screen there. **Modify** the existing code to do this when it creates the window:
 
 ```python
 screen = pygame.display.set_mode([800, 600])
 ```
 
-The function `set_mode` (which lives inside `display`, which in turn lives inside `pygame`) returns a result. We use the `=` symbol to give a name to this result. We call it `screen`, but we could have given it any other name. The important thing is that we give it a name so that we can refer to it later.
+The function `set_mode` (which lives inside `display`, which in turn lives inside `pygame`) returns a result. We use the `=` symbol to give a name to this result. In this case, the result is an "object" that represents the screen. We call it `screen`, but we could have given it any other name. The important thing is that we give it a name that is easy to remember later.
 
 ## Loading the image
 
@@ -41,17 +41,22 @@ Next, we have to load the image and give it a name too. This is the line for tha
 image = pygame.image.load("my-image.png")
 ```
 
-In this example, I assume that `my-image.png` is the name of the image file. Your file will have a different name, so change the code to reflect that.
+In this example, the image file is called `my-image.png`. It will be different for you. Make sure to type the name of the file you want to load.
 
-Again, the `load` function gives us a result, and we use the `=` symbol to give this result a name: `image`. We could have called it anything else.
+What the line does is this:
 
-Now we draw the image on the screen. To do this, we use the function `blit`:
+1. It uses the function `pygame.image.load` to load an image into memory.
+2. The function knows what image to read because we tell it the name of the file: "my-image.png". It will be different in your case.
+3. The function "returns" an "object" that represents the image in the program.
+4. We give a name to this "object" so that we can use it later. We call it `image`, using the equals `=` symbol. We could have called it anything else.
+
+Now we draw the image on the screen. To do this, we use the function `blit`, which lives inside the object that we called `screen`:
 
 ```python
 screen.blit(image, [0, 0])
 ```
 
-Notice that `blit` lives inside `screen`. "Blit" is a technical term, don't worry too much about the funny word. What it means here is "draw the image on the screen".
+"Blit" is a technical term, don't worry too much about the funny word. What it means here is "draw the thing we called `image` on the thing we called `screen`".
 
 ## Actually displaying the result
 
@@ -65,5 +70,6 @@ pygame.display.flip()
 
 ## Challenges
 
-* Where do you think you have to add the lines above on the program? Try adding them yourself and see where they would go.
-* Make the image appear in the centre of the screen
+1. Where do you think you have to add the lines above on the program? Try adding them yourself and see where they would go.
+2. Make the image appear in the centre of the screen
+3. Draw the image four times on the screen, so that it appears on each of the four corners

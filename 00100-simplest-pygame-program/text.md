@@ -1,6 +1,6 @@
 # The simplest possible Pygame program
 
-First we need to "import" the Pygame "library" into our program. A "library" is a bunch of code that we can use in our programs. By "importing", we mean reading a library from the hard disk and loading it in memory so that our program can use it. In Python, this is done with `import`, like this:
+First we need to "import" the Pygame "library" into our program. A "library" is a bunch of code that somebody else wrote and we can use in our programs. By "importing", we mean reading a library from the hard disk and loading it in memory so that our program can use it. In Python, this is done with `import`, like this:
 
 ```python
 import pygame
@@ -28,4 +28,5 @@ pygame.display.set_mode([800, 600])
 
 ## Questions
 
-* How would you make the window be 640 pixels wide and 480 pixels high?
+1. Explain with your own words what this program does at each step
+2. How would you make the window be 640 pixels wide and 480 pixels high?
