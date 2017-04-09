@@ -68,5 +68,4 @@ Therefore, it's common within programmers to use all-capitals names to signify t
 ## Challenges
 
 1. Think of a few colours and look them up on the Internet. Find their RGB values and create constants to refer to them. Use them in your program.
-2. Modify your program so that the background flashes between two (or more) different colours.
-3. Modify your program so that the background starts black, and changes gradually to white.
+2. Modify your program so that the background starts black, and changes gradually to white.
