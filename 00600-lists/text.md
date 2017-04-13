@@ -1,0 +1,56 @@
+# Lists
+
+Chances are that our programs won't have just one thing to draw, but many. It's boring and time-consuming to write code to handle each and every one thing that shows up in your program.
+
+Fortunately, we can make "lists" of things. When we have lists, we can write code to deal with everything on the list, regardless of whether the list has one item or a thousand.
+
+## A bit of theory: lists
+
+Start a new program from scratch. Type it as follows:
+
+```python
+many_things = ["one", "two", "three"]
+print(many_things)
+
+for thing in many_things:
+    print(thing)
+```
+
+The words `for` and `in` above are special. They create a loop, similar to the ones we have already seen. We use this construct to loop over lists. We could do it with `while` too, but it's easier this way.
+
+1. Run the program. What does it do?
+2. How does it work?
+3. Add other items to the list and run the program.
+4. Try with things other than text in the list.
+
+## Back to Pygame: moving many things
+
+Now we are going to put together two concepts we just learned:
+
+  * Objects: to put together details related to each thing on the screen.
+  * Lists: to deal with many things at once.
+
+Let's try again to build a Pygame program from scratch. Write code for each of the following, one at a time:
+
+1. Import Pygame into the program.
+2. Define color black in a constant.
+3. Initialize Pygame
+4. Create a screen window and give it a name.
+
+So far, it's all stuff we have done before. Next let's apply some of what we saw in the chapter about objects:
+
+1. Define a class `Actor`.
+2. Create an actor and put it in the variable `actor1`.
+3. Set the `x` and the `y` coordinates for the actor. Use any numbers you like.
+4. Set an image for this actor. Choose any image you like.
+5. Create a second actor, `actor2`, with the same image, but different coordinates.
+6. Create a list `actor_list` that has both `actor1` and `actor2`.
+
+OK so far? Here comes the interesting part. After the code above, write code for the following:
+
+1. A loop that runs 300 times. Each time it will do all the steps below:
+    1. Paint the screen completely black.
+    2. For each actor in `actor_list`, do the following:
+        1. Increase the `y` coordinate.
+        2. "Blit" the image for the actor on the screen.
+    3. "Flip" the screen to update it.
