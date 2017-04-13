@@ -1,6 +1,6 @@
 # Lists
 
-Chances are that our programs won't have just one thing to draw, but many. It's boring and time-consuming to write code to handle each and every one thing that shows up in your program.
+Chances are that our programs won't have just one thing to draw, but many. We could have a hundred characters moving around, and we don't want to write code for each and every one of them. It would be boring and time-consuming.
 
 Fortunately, we can make "lists" of things. When we have lists, we can write code to deal with everything on the list, regardless of whether the list has one item or a thousand.
 
@@ -30,10 +30,10 @@ Now we are going to put together two concepts we just learned:
   * Objects: to put together details related to each thing on the screen.
   * Lists: to deal with many things at once.
 
-Let's try again to build a Pygame program from scratch. Write code for each of the following, one at a time:
+Let's try again to build a Pygame program from scratch. Start with a blank Python file and write code for each of the following, one at a time:
 
 1. Import Pygame into the program.
-2. Define color black in a constant.
+2. Define the color black as a constant.
 3. Initialize Pygame
 4. Create a screen window and give it a name.
 
