@@ -22,8 +22,8 @@ We needed to stop to learn loops because we need them to create animations. Now 
 
 Let's try step by step. Write a program that does the following. Each line in the following list is a line of the program. Translate each line into a line of the program:
 
-1. Import pygame into the program
-2. Initialize pygame
+1. Import Pygame into the program
+2. Initialize Pygame
 3. Create a screen window and give it a name
 4. Load an image into memory
 
