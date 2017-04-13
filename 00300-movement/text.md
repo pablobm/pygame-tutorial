@@ -9,7 +9,7 @@ In Python, the word `while` is used to indicate a loop. Start a new program from
 ```python
 count = 0
 while count < 10:
-  print count
+  print(count)
   count = count + 1
 ```
 
