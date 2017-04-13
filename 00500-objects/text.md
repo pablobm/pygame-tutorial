@@ -51,14 +51,14 @@ We are going to create an object that will represent our moving image. A moment 
 
 Go back to your Pygame program and try make these changes. They will be before the main loop:
 
-  * The things that move on screen on our program are going to be called "actors". Define a class called `Actor`.
-  * Create a variable representing an actor.
-  * The image we had, store it inside an our actor. This is instead of being on a variable of its own.
-  * Set the `x` and the `y` of the actor. Make them `0` at the start.
+  * The things that move on screen on our program are going to be called "actors". Define a class called `Actor`. _(2 new lines)._
+  * Create a variable representing an actor. _(1 new line)._
+  * The image we had, store it inside an our actor. This is instead of being on a variable of its own. _(modify one existing line)._
+  * Set the `x` and the `y` of the actor. Make them `0` at the start. _(2 new lines, one for each coordinate)._
 
 In the main loop, do the following:
 
-  * Change the `x` coordinate of the actor so that it increases by 1 on each iteration of the loop.
-  * Modify the `screen.blit` line so that it works with our new object.
+  * Change the `x` coordinate of the actor so that it increases by 1 on each iteration of the loop. _(1 new line)._
+  * Modify the `screen.blit` line so that it works with our new object. _(modify the existing line)._
 
 If everything goes according to plan, the program should do exactly the same thing it was doing before. This was not about adding something to the program, but about organising things before we go forward.
