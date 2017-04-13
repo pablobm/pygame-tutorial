@@ -23,7 +23,7 @@ ash.name = "Ash"
 ash.age = "10"
 ```
 
-The two first lines define a new "class" of "objects". You can read it as "some things in this program are going to be 'students'". It may sound a bit weird, but it's useful later. Don't worry too much.
+The two first lines define a new "class" of "objects". You can read it as "some things in this program are going to be 'students'". It may sound a bit weird, but it'll be useful later. Don't worry too much, you don't have to understand it completely.
 
 The next three lines read as follows:
 
