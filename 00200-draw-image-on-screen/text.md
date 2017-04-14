@@ -1,10 +1,12 @@
 # Drawing something on the screen
 
-Let's draw something on the screen, as well as keep the screen open for a few seconds so that we can see what's on it.
+So far, our program is only showing a blank screen. Let's draw an image on it.
 
 ## Waiting
 
-To make Python wait a bit, we need to load a library that gives us that ability. The one we need now is called `time`, and includes code to help us deal with time. We can import it like this:
+At the moment, the program opens an window and closes it immediately. We should make the window stay open for a bit first.
+
+To make Python wait a bit before ending, we need to load a library that gives us that ability. The one we need now is called `time`, and includes code to help us deal with time. We can import it like this:
 
 ```python
 import time

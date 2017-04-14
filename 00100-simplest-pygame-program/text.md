@@ -12,7 +12,7 @@ The next step is to tell pygame to get started, as this doesn't happen until we 
 pygame.init()
 ```
 
-Finally, we create a window where we can display our game. When we do this, we have to specify what size of window we have. A typical window size is 800 pixels wide and 600 pixels high. We would do it like this:
+Finally, we create a window where we can display our game. When we do this, we have to specify what size of window we want. A typical window size is 800 pixels wide and 600 pixels high. We would do it like this:
 
 ```python
 pygame.display.set_mode([800, 600])
@@ -28,5 +28,6 @@ pygame.display.set_mode([800, 600])
 
 ## Questions
 
-1. Explain with your own words what this program does at each step
-2. How would you make the window be 640 pixels wide and 480 pixels high?
+1. Run the program. What does it do?
+1. Explain in your own words what this program does at each step
+1. How would you make the window be 640 pixels wide and 480 pixels high?
