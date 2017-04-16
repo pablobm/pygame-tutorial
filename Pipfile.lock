@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8ded7ad53e59014b618d4bd6e9c1912dffa0abaaa52473cc9272c69aa4f1c15f"
+            "sha256": "af614b9ed00c53d0ed9eff9db58280b5681a143eb4da4947b6f6db9f4014f1c4"
         },
         "requires": {},
         "sources": [
@@ -15,6 +15,10 @@
         "Jinja2": {
             "hash": "sha256:2231bace0dfd8d2bf1e5d7e41239c06c9e0ded46e70cc1094a0aa64b0afeb054",
             "version": "==2.9.6"
+        },
+        "Markdown": {
+            "hash": "sha256:0ac8a81e658167da95d063a9279c9c1b2699f37c7c4153256a458b3a43860e33",
+            "version": "==2.6.8"
         },
         "MarkupSafe": {
             "hash": "sha256:a6be69091dac236ea9c6bc7d012beab42010fa914c459791d627dad4910eb665",
