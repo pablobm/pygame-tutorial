@@ -1,10 +1,10 @@
 # Creating movement
 
-To get images moving, we'll need to draw them, then draw them again a bit further, and again a bit further, etc. We can use a loop to get this effect.
+To get images moving, we'll need to draw them many times, very fast, each time in a slightly different position. This way, we create an illusion of an object moving. We can use a loop to get this effect.
 
 ## A bit of theory: Loops
 
-In Python, the word `while` is used to indicate a loop. Start a new program from scratch. Type it as follows:
+In Python, the word `while` is used to create a loop. Start a new program from scratch. Type it as follows:
 
 ```python
 count = 0
@@ -20,14 +20,12 @@ while count < 10:
 
 We needed to stop to learn loops because we need them to create animations. Now that let's go back to the program we were writing with Pygame and try to use this knowledge.
 
-Let's try step by step. Write a program that does the following. Each line in the following list is a line of the program. Translate each line into a line of the program:
+Let's try step by step. Write a program that does the following. Each line in the following list is a line of the program. Translate each line into a line of the program (revisit the previous lessons to remember how to do all this):
 
 1. Import Pygame into the program
 2. Initialize Pygame
 3. Create a screen window and give it a name
 4. Load an image into memory
-
-So far, all the above is stuff we have seen already. If you can't figure it out, review the previous lessons, looking at the examples we have seen so far.
 
 When you are done with it, it's time to make the image move. To the program we just wrote, we are going to add code to do the following:
 
