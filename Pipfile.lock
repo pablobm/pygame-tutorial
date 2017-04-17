@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "af614b9ed00c53d0ed9eff9db58280b5681a143eb4da4947b6f6db9f4014f1c4"
+            "sha256": "4991ea44c521fb720723c90fb8dc1935b2ceecdb46e6e7130e377aac5219c686"
         },
         "requires": {},
         "sources": [
@@ -47,6 +47,10 @@
         "pelican": {
             "hash": "sha256:f1456c163a963d498abd741ea7c6f47984365ecd8bbd6e118c44e247815cb7ef",
             "version": "==3.7.1"
+        },
+        "pystache": {
+            "hash": "sha256:f7bbc265fb957b4d6c7c042b336563179444ab313fb93a719759111eabd3b85a",
+            "version": "==0.5.4"
         },
         "python-dateutil": {
             "hash": "sha256:537bf2a8f8ce6f6862ad705cd68f9e405c0b5db014aa40fa29eab4335d4b1716",
