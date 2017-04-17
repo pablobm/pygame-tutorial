@@ -8,6 +8,7 @@ body {
 .main-body > h3,
 .main-body > ul,
 .main-body > ol,
+.main-body > .main-body__note,
 .main-body > div.highlight > pre {
   margin: 1.5rem auto;
   max-width: 40rem;
@@ -28,6 +29,21 @@ body {
       #e8e8e8 3px,
       white 4px,
       white 6px
+    );
+}
+
+.main-body__note .main-body__note-body {
+  width: 80%;
+  padding: 0 1.5em;
+  border: 1px solid #ff5;
+  background: #fffff8;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #ffc,
+      #ffc 3px,
+      #fffff8 4px,
+      #fffff8 6px
     );
 }
 
