@@ -1,14 +1,18 @@
 #!/usr/bin/env python
+import io
 import os
 import re
 import shutil
 import sys
 
 import markdown
+import pystache
+
 
 LESSONS_DIR = 'lessons'
 LESSONS_PATTERN = LESSONS_DIR + '/\d+-[^/]+'
 LESSON_TEXT_FILE = 'text.md'
+LAYOUT_PATH = LESSONS_DIR + '/layout.html.mustache'
 OUTPUT_DIR = 'output'
 
 
@@ -26,18 +30,34 @@ def build():
             lesson_name = match.group(0)
             src = match.group(0) + '/' + LESSON_TEXT_FILE
             dst = OUTPUT_DIR + '/' + lesson_name
-            build_lesson(src, dst)
+            build_lesson(src, dst, layout=LAYOUT_PATH)
 
 
 #
 # Plumbing
 #
 
-def build_lesson(src, dst):
+class LayoutView:
+    def __init__(self, contents):
+        self.contents = contents
+
+
+def build_lesson(src, dst, layout=None):
+    if layout == None:
+        raise TypeError("`layout` is a required argument")
+
     dst_with_ext = dst + '.html'
     dst_dir = os.path.dirname(dst)
     os.makedirs(dst_dir, mode=0o755, exist_ok=True)
-    markdown.markdownFromFile(input=src, output=dst_with_ext)
+
+    lesson_html = io.BytesIO()
+    markdown.markdownFromFile(input=src, output=lesson_html)
+    layout_view = LayoutView(contents=lesson_html.getvalue())
+
+    layout_renderer = pystache.Renderer()
+    final_file = layout_renderer.render_path(layout, layout_view)
+    with open(dst_with_ext, 'w') as f:
+        f.write(final_file)
 
 
 #
