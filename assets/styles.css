@@ -1,4 +1,41 @@
-.main-body {
+body {
+  margin: 0;
+}
+
+.main-body > p,
+.main-body > h1,
+.main-body > h2,
+.main-body > h3,
+.main-body > ul,
+.main-body > ol,
+.main-body > div.highlight > pre {
+  margin: 1.5rem auto;
+  max-width: 40rem;
+  line-height: 1.5em;
+}
+
+.main-body > div.highlight > pre {
   margin: 0 auto;
-  max-width: 40em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+.main-body > div.highlight {
+  background: #eee;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #e8e8e8,
+      #e8e8e8 3px,
+      white 4px,
+      white 6px
+    );
+}
+
+
+/*
+ * Overrides to Pygments
+ */
+
+.highlight pre {
+  background: transparent;
 }
