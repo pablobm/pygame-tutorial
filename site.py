@@ -5,6 +5,7 @@ import re
 import shutil
 import sys
 
+from bs4 import BeautifulSoup
 import markdown
 import pystache
 
@@ -40,11 +41,6 @@ def build():
 # Plumbing
 #
 
-class LayoutView:
-    def __init__(self, contents):
-        self.contents = contents
-
-
 def build_lesson(src, dst, layout=None):
     if layout == None:
         raise TypeError("`layout` is a required argument")
@@ -53,9 +49,13 @@ def build_lesson(src, dst, layout=None):
     dst_dir = os.path.dirname(dst)
     os.makedirs(dst_dir, mode=0o755, exist_ok=True)
 
-    lesson_html = io.BytesIO()
-    markdown.markdownFromFile(input=src, output=lesson_html, extensions=['pymdownx.superfences'])
-    layout_view = LayoutView(contents=lesson_html.getvalue())
+    lesson_html_stream = io.BytesIO()
+    markdown.markdownFromFile(input=src, output=lesson_html_stream, extensions=['pymdownx.superfences'])
+    lesson_html = lesson_html_stream.getvalue()
+    layout_view = {
+        'contents': lesson_html,
+        'title': extract_title(lesson_html),
+    }
 
     layout_renderer = pystache.Renderer()
     final_file = layout_renderer.render_path(layout, layout_view)
@@ -70,6 +70,10 @@ def copy_assets(src, dst):
             shutil.copytree(src_path, dst_path)
         else:
             shutil.copy2(src_path, dst_path)
+
+def extract_title(lesson_html):
+    soup = BeautifulSoup(lesson_html, 'html.parser')
+    return soup.h1.get_text()
 
 
 #

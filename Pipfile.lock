@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b93219d61ebc74fe81beb1437205c48cc677288d6c4be7c03424538c6e3c72e7"
+            "sha256": "586e7c27ff3d64e1fab165c94c592f9b18204402ef673681ffdd69a9d3cc1746"
         },
         "requires": {},
         "sources": [
@@ -31,6 +31,10 @@
         "Unidecode": {
             "hash": "sha256:eedac7bfd886f43484787206f6a141b232e2b2a58652c54d06499b187fd84660",
             "version": "==0.04.20"
+        },
+        "beautifulsoup4": {
+            "hash": "sha256:0a91347d5a4ab2196407ff4d3d758f2e712cae9bdfa3fd1eb0f83edea95e0d8d",
+            "version": "==4.5.3"
         },
         "blinker": {
             "hash": "sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6",
