@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4991ea44c521fb720723c90fb8dc1935b2ceecdb46e6e7130e377aac5219c686"
+            "sha256": "b93219d61ebc74fe81beb1437205c48cc677288d6c4be7c03424538c6e3c72e7"
         },
         "requires": {},
         "sources": [
@@ -47,6 +47,10 @@
         "pelican": {
             "hash": "sha256:f1456c163a963d498abd741ea7c6f47984365ecd8bbd6e118c44e247815cb7ef",
             "version": "==3.7.1"
+        },
+        "pymdown-extensions": {
+            "hash": "sha256:bd66997ff5cc4b7cd8d9d92b0a408c15a820d1140a4e152d83cf66c58b4bf150",
+            "version": "==3.0"
         },
         "pystache": {
             "hash": "sha256:f7bbc265fb957b4d6c7c042b336563179444ab313fb93a719759111eabd3b85a",

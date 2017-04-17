@@ -9,6 +9,7 @@ import markdown
 import pystache
 
 
+ASSETS_DIR = 'assets'
 LESSONS_DIR = 'lessons'
 LESSONS_PATTERN = LESSONS_DIR + '/\d+-[^/]+'
 LESSON_TEXT_FILE = 'text.md'
@@ -32,6 +33,8 @@ def build():
             dst = OUTPUT_DIR + '/' + lesson_name
             build_lesson(src, dst, layout=LAYOUT_PATH)
 
+    copy_assets(ASSETS_DIR, OUTPUT_DIR)
+
 
 #
 # Plumbing
@@ -51,13 +54,22 @@ def build_lesson(src, dst, layout=None):
     os.makedirs(dst_dir, mode=0o755, exist_ok=True)
 
     lesson_html = io.BytesIO()
-    markdown.markdownFromFile(input=src, output=lesson_html)
+    markdown.markdownFromFile(input=src, output=lesson_html, extensions=['pymdownx.superfences'])
     layout_view = LayoutView(contents=lesson_html.getvalue())
 
     layout_renderer = pystache.Renderer()
     final_file = layout_renderer.render_path(layout, layout_view)
     with open(dst_with_ext, 'w') as f:
         f.write(final_file)
+
+def copy_assets(src, dst):
+    for entry in os.listdir(src):
+        src_path = src + '/' + entry
+        dst_path = dst + '/' + entry
+        if os.path.isdir(src_path):
+            shutil.copytree(src_path, dst_path)
+        else:
+            shutil.copy2(src_path, dst_path)
 
 
 #
