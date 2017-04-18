@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+code {
+  background-color: #e8e8e8;
+  padding: 0 0.3em;
+}
+
 .main-body > p,
 .main-body > h1,
 .main-body > h2,
