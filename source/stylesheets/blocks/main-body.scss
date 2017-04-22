@@ -1,0 +1,46 @@
+.main-body > p,
+.main-body > h1,
+.main-body > h2,
+.main-body > h3,
+.main-body > ul,
+.main-body > ol,
+.main-body > .main-body__note,
+.main-body > div.highlight > pre {
+  margin: 1.5rem auto;
+  width: 90vw;
+  max-width: 40rem;
+  line-height: 1.5em;
+}
+
+.main-body > div.highlight > pre {
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+.main-body > div.highlight {
+  background: #eee;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #e8e8e8,
+      #e8e8e8 3px,
+      white 4px,
+      white 6px
+    );
+}
+
+.main-body__note .main-body__note-body {
+  width: 80%;
+  padding: 0 1.5em;
+  border: 1px solid #ff5;
+  background: #fffff8;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #ffc,
+      #ffc 3px,
+      #fffff8 4px,
+      #fffff8 6px
+    );
+}
+
