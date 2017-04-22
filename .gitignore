@@ -1,1 +1,9 @@
+# jEdit swap files
 *~
+
+# Added by Middleman
+.bundle
+.cache
+.DS_Store
+.sass-cache
+build/
