@@ -70,7 +70,10 @@ helpers LessonsHelper
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
+configure :build do
+  set :http_prefix, '/pygame-tutorial'
+  set :build_dir, 'docs'
 #   activate :minify_css
 #   activate :minify_javascript
-# end
+end
+
