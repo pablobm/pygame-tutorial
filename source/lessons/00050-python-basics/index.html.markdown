@@ -1,4 +1,6 @@
-# Python basics
+---
+title: Python basics
+---
 
 Before we get on with Pygame, we need to understand some basic concepts. These are:
 

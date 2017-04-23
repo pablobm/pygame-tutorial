@@ -1,4 +1,6 @@
-# Creating movement
+---
+title: Creating movement
+---
 
 To get images moving, we'll need to draw them many times, very fast, each time in a slightly different position. This way, we create an illusion of an object moving. We can use a loop to get this effect.
 

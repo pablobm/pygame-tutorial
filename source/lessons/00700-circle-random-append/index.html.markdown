@@ -1,4 +1,6 @@
-# Circle, random, append
+---
+title: Circle, random, append
+---
 
 Before we go further, we need to stop again and learn a few things. For the next program, we'll need some new functions that we haven't seen before. Let's see them one by one.
 

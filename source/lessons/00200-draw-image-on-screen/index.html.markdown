@@ -1,4 +1,6 @@
-# Drawing something on the screen
+---
+title: Drawing something on the screen
+---
 
 So far, our program is only showing a blank screen. Let's draw an image on it.
 

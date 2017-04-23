@@ -1,4 +1,6 @@
-# The simplest possible Pygame program
+---
+title: The simplest possible Pygame program
+---
 
 Let's put in practice what we learned. We are going to use the Pygame library. Pygame has functions to deal with graphics, sounds, keyboard, etc. It allows us to build games using Python.
 

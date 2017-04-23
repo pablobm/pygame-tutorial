@@ -1,4 +1,6 @@
-# Objects
+---
+title: Objects
+---
 
 Before we go further, we need to stop a moment to organise our code a bit better. This will help us later to deal with many things moving at the same time.
 

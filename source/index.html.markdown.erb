@@ -1,0 +1,9 @@
+---
+title: Pygame tutorial
+---
+
+<ol>
+  <% all_lessons.each do |lesson| %>
+    <li><%= link_to lesson.title, lesson.path %></li>
+  <% end %>
+</ol>
