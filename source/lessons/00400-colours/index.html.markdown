@@ -1,4 +1,6 @@
-# Colours
+---
+title: Colours
+---
 
 In the previous section, we used the following code to fill the screen black before painting a new frame:
 

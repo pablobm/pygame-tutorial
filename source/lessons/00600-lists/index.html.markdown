@@ -1,4 +1,6 @@
-# Lists
+---
+title: Lists
+---
 
 Chances are that our programs won't have just one thing to draw, but many. We could have a hundred characters moving around, and we don't want to write code for each and every one of them. It would be boring and time-consuming.
 

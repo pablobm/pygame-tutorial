@@ -1,4 +1,6 @@
-# Star field
+---
+title: Star field
+---
 
 So we have many things on the screen. Let's move them and try to create something useful. We can draw small circles moving down the screen and simulate a star field.
 
