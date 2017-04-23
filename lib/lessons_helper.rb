@@ -16,11 +16,14 @@ module LessonsHelper
     end
 
     def path
-      fs_path.relative_path_from(PAGES_BASE_PATH).to_s
+      to_site_path(fs_path)
     end
 
     def title
-      sitemap.find_resource_by_destination_path(path_with_file).data.title
+      sitemap
+        .find_resource_by_destination_path(path_with_file)
+        .data
+        .title
     end
 
     private
@@ -28,7 +31,11 @@ module LessonsHelper
     attr_reader :fs_path, :sitemap
 
     def path_with_file
-      fs_path.join('index.html')
+      to_site_path(fs_path.join('index.html'))
+    end
+
+    def to_site_path(file_path)
+      file_path
         .relative_path_from(PAGES_BASE_PATH)
         .to_s
     end
