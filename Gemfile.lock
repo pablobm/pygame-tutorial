@@ -8,6 +8,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    albino (1.3.3)
+      posix-spawn (>= 0.3.6)
     autoprefixer-rails (6.7.7.2)
       execjs
     backports (3.7.0)
@@ -89,7 +91,9 @@ GEM
     padrino-support (0.13.3.3)
       activesupport (>= 3.1)
     parallel (1.11.1)
+    posix-spawn (0.3.13)
     public_suffix (2.0.5)
+    pygmentize (0.0.3)
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
@@ -111,9 +115,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  albino
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-livereload
+  pygmentize
   redcarpet
   tzinfo-data
   wdm (~> 0.1)

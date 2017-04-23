@@ -4,20 +4,20 @@
 .main-body > h3,
 .main-body > ul,
 .main-body > ol,
-.main-body > .main-body__note,
-.main-body > div.highlight > pre {
+.main-body__note,
+.main-body > .highlight > pre {
   margin: 1.5rem auto;
   width: 90vw;
   max-width: 40rem;
   line-height: 1.5em;
 }
 
-.main-body > div.highlight > pre {
+.main-body > .highlight > pre {
   margin: 0 auto;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-.main-body > div.highlight {
+.main-body > .highlight {
   background: #eee;
   background-image:
     repeating-linear-gradient(

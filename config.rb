@@ -9,6 +9,29 @@ activate :livereload
 
 set :markdown_engine, :redcarpet
 
+class SyntaxHighlighting < Redcarpet::Render::HTML
+  def block_code(code, language)
+    language = 'ruby' if language.to_s.strip.empty?
+    Albino.colorize(code, language)
+  end
+end
+
+set(
+  :markdown,
+
+  renderer: SyntaxHighlighting,
+
+  no_intra_emphasis:   true,
+  tables:              true,
+  fenced_code_blocks:  true,
+  autolink:            true,
+  strikethrough:       true,
+  lax_html_blocks:     true,
+  space_after_headers: true,
+  superscript:         true,
+)
+
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
