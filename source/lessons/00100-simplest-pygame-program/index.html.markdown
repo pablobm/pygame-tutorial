@@ -4,7 +4,7 @@ title: The simplest possible Pygame program
 
 Let's put in practice what we learned. We are going to use the Pygame library. Pygame has functions to deal with graphics, sounds, keyboard, etc. It allows us to build games using Python.
 
-First we need to import Pygame "library" into our program. As we have seen before, we do it like this:
+First we need to import Pygame library into our program. As we have seen before, we do it like this:
 
 ```python
 import pygame
@@ -22,7 +22,7 @@ Finally, we create a window where we can display our game. When we do this, we h
 pygame.display.set_mode([800, 600])
 ```
 
-The complete program looks like this:
+This is the complete program:
 
 ```python
 import pygame
