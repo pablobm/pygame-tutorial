@@ -6,6 +6,7 @@ module LessonsHelper
     Pathname(__dir__)
       .join(PAGES_BASE_PATH, LESSONS_RELPATH)
       .children
+      .sort
       .map{|path| Lesson.new(path, sitemap: sitemap) }
   end
 
