@@ -12,13 +12,13 @@ Using Pygame we can draw circles on the screen. This is the code we need to use:
 pygame.draw.circle(screen, color, position, radius)
 ```
 
-The words `screen`, `color`, `position` and `radius` are information that you'll have to provide. This is an example of use:
+The words `screen`, `color`, `position` and `radius` are information that we'll have to provide. This is an example of use:
 
 ```python
 pygame.draw.circle(screen, [255, 255, 255], [100, 100], 10)
 ```
 
-The code above will draw a white circle with a 10-pixel radius at the position x=100 and y=100. You will have to provide a `screen` similar to how you have done before. Write a program to try it out. Then answer these questions:
+The code above will draw a white circle with a 10-pixel radius at the position x=100 and y=100. You will have to provide a `screen` similar to how we have done before. Write a program to try it out. Then answer these questions:
 
 * Why is the circle white?
 * How would you make the circle red?
@@ -27,7 +27,7 @@ The code above will draw a white circle with a 10-pixel radius at the position x
 
 ## Generating random numbers
 
-In Python, there are several ways of generating random numbers. Regardless of how you do it, you'll need to import the `random` library into your program. Then you can use a function such as the following:
+In Python, there are several ways of generating random numbers. Regardless of how we do it, we'll need to import the `random` library into our program. Then we can use a function such as the following:
 
 ```python
 random.randint(1, 10)
@@ -40,7 +40,7 @@ That code will generate a random number between 1 and 10.
 
 ## Adding things to lists
 
-We have seen how to create lists. Here's how to add things to list that already exist:
+We have seen how to create lists. Here's how to add things to a list that already exists:
 
 ```python
 my_list.append(new_item)
@@ -74,6 +74,6 @@ OK, so now let's write a program that uses all the above. Write code for each on
     5. Add the object to the list of circles.
 6. Initialize Pygame
 7. Create a window of size 800x600
-8. Write a loop that, for each object in the list, it does the following:
+8. Write a loop that, for each object in the list, does the following:
     1. Draw a white circle on the screen, with the coordinates and radius given by the object in the list
 9. Update the screen.

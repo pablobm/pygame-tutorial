@@ -6,7 +6,7 @@ So we have many things on the screen. Let's move them and try to create somethin
 
 ## A bit of theory: conditionals
 
-You may have seen this before, but it's good to refresh our memories. Write a new program that does the following:
+You may have seen this before, but it's good to refresh our memories. Type down the following program:
 
 ```python
 number = 4
@@ -36,7 +36,7 @@ We can now use all we have learned so far to create a star field animation. As u
     4. Give the star a random `size`, between 1 and 3.
     5. Give the star a random `speed`, between 1 and 3.
     6. Give the star a random `brightness`, between 0 and 255.
-    7. Add the object to the list of circles.
+    7. Add the object to the list of stars.
 6. Initialize Pygame
 7. Create a window of size 800x600
 8. Write a loop that will run 500 times. On each iteration, do the following:

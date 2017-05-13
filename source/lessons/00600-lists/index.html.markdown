@@ -11,7 +11,7 @@ Fortunately, we can make "lists" of things. When we have lists, we can write cod
 Start a new program from scratch. Type it as follows:
 
 ```python
-many_things = ["one", "two", "three"]
+many_things = [2, 4, 6]
 print(many_things)
 
 for thing in many_things:
@@ -23,13 +23,35 @@ The words `for` and `in` above are special. They create a loop, similar to the o
 1. Run the program. What does it do?
 2. How does it work?
 3. Add other items to the list and run the program.
-4. Try with things other than text in the list.
+
+You can use variables in lists too:
+
+```python
+some_number = 4
+many_things = [2, some_number, 6]
+print(many_things)
+
+for thing in many_things:
+    print(thing)
+```
+
+You can even have lists of lists:
+
+```python
+some_number = 4
+first_list = [2, some_number, 6]
+second_list = [first_list, 4, 5]
+print(second_list)
+
+for thing in second_list:
+    print(thing)
+```
 
 ## Back to Pygame: moving many things
 
-Now we are going to put together two concepts we just learned:
+Now we are going to use two concepts we just learned:
 
-  * Objects: to put together details related to each thing on the screen.
+  * Objects: to keep together details related to each thing on the screen.
   * Lists: to deal with many things at once.
 
 Let's try again to build a Pygame program from scratch. Start with a blank Python file and write code for each of the following, one at a time:
@@ -56,3 +78,7 @@ OK so far? Here comes the interesting part. After the code above, write code for
         1. Increase the `y` coordinate.
         2. "Blit" the image for the actor on the screen.
     3. "Flip" the screen to update it.
+
+Come on, get typing. I'll wait.
+
+OK, how did it go? If you are having trouble, remember to address one thing at a time. Don't try to write all at once. Review the previous lessons if you need.
