@@ -27,9 +27,9 @@ In terms of RGB, "pure" red will only have red. "Pure" green will only have gree
 * Paint the screen blue
 * Try with other numbers
 
-<div class="note">
-The number 255 is the maximum number we can use. When representing a colour, each of the three numbers must be between 0 and 255. The number 255 seems a bit random, but it is not arbitrary: it is a limit given by how all this works internally. Don't worry about that for now. Just know that 255 in the maximum possible value many programming-related measures.
-</div>
+<div class="main-body__note"><div class="main-body__note-body">
+<p>The number 255 is the maximum number we can use. When representing a colour, each of the three numbers must be between 0 and 255. The number 255 seems a bit random, but it is not arbitrary: it is a limit given by how all this works internally. Don't worry about that for now. Just know that 255 is the maximum possible value in many programming-related measures.</p>
+</div></div>
 
 ## Mixing colours
 
