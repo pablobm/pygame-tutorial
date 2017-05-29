@@ -20,28 +20,28 @@ Start a new, blank program and type the following:
 class Student:
     pass
 
-ash = Student()
-ash.name = "Ash"
-ash.age = "10"
+s = Student()
+s.name = "Ash"
+s.age = "10"
 ```
 
 The two first lines define a new "class" of "objects". You can read it as "some things in this program are going to be 'students'". It may sound a bit weird, but it'll be useful later. Don't worry too much, you don't have to understand it completely.
 
 The next three lines read as follows:
 
-  * Create a new student and put it on a variable called `ash`.
-  * `ash` has a name, and it's (surprise, surprise) "Ash".
-  * `ash` has an age, and it's 10.
+  * Create a new student and put it on a variable called `s`.
+  * `s` has a name, and it's "Ash".
+  * `s` has an age, and it's 10.
 
-This is not very different from creating variables for names and ages as we have done in the past. The thing that is different is that `name` and `age` are going to live inside `ash`. We'll use the dot `.` symbol to read and write Ash's name and age.
+This is not very different from creating variables for names and ages as we have done in the past. The thing that is different is that `name` and `age` are going to live inside `s`. We'll use the dot `.` symbol to read and write the student's name and age.
 
 Using the dot `.` symbol, we can access the name and age, same as we do with any other variable. For example, add this to the program:
 
 ```python
 print("My name is")
-print(ash.name)
+print(s.name)
 print("and I am")
-print(ash.age)
+print(s.age)
 print("years old")
 ```
 
