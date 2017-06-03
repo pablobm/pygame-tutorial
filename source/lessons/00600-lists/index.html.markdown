@@ -1,5 +1,5 @@
 ---
-title: Lists
+title: Lists, part 1
 ---
 
 Chances are that our programs won't have just one thing to draw, but many. We could have a hundred characters moving around, and we don't want to write code for each and every one of them. It would be boring and time-consuming.
@@ -24,7 +24,7 @@ The words `for` and `in` above are special. They create a loop, similar to the o
 2. How does it work?
 3. Add other items to the list and run the program.
 
-You can use variables in lists too:
+You can use variables when creating a list:
 
 ```python
 some_number = 4
