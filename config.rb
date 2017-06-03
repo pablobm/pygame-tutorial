@@ -5,6 +5,13 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.remote = 'origin'
+  deploy.branch = 'master'
+  deploy.strategy = :force_push
+end
+
 activate :livereload
 
 set :markdown_engine, :redcarpet
