@@ -32,7 +32,7 @@ Computer programs deal with data. "Data" can be numbers, pieces of text, on/off 
 * Your position (three numbers).
 * The position of anything in the game (three numbers for each single thing).
 * The name of a save slot (a list of numbers, each representing a letter, together forming words).
-* A block (three numbers for the position, and a number that can be used to look up the block type in a "dictionary of blocks").
+* A block (five numbers: three for the position, one that tells the block type, one to tell the damage it has received).
 * And many, many more things, one for each single concept in the game.
 
 This is an example of variable:
@@ -78,7 +78,7 @@ In the code above, the variable `player_energy` started as 100, then changed to 
 
 <div class="main-body__note"><div class="main-body__note-body">
 <p>When we say `energy = 100`, this is not the same "equals" `=` that you normally use in math. The `energy` will not always be `100`. It will change over time.</p>
-<p>Thing of it as "put `100` in `energy` for now".</p>
+<p>Thing of it as "the `energy` is `100` for now".</p>
 </div></div>
 
 ## Functions
@@ -95,13 +95,13 @@ The function is `print`, and we use it by writing parentheses (round brackets) a
 
 `print` is used to show things on a terminal screen. In the example above we don't actually show anything, because we are not telling `print` what so show.
 
-Functions use data. If we give data to `print`, it will actually print something out:
+Functions use data. If we give data to `print`, it will print it out. The following program prints number 10 on the terminal:
 
 ```python
 print(10)
 ```
 
-The function "receives" a `10` and prints it. We can also use variables, or do math:
+The program tells the function `print` to use number 10. In programmer's lingo, we say that we pass `10` to the function, and that the function "receives" `10`. We can also use variables, or do math:
 
 ```python
 energy = 100
@@ -125,7 +125,7 @@ When passing more than one piece of data to a function, we use a comma `,` to se
 
 Libraries are collections of functions that we can use in our programs. Python comes bundled with many libraries, and we can download more or even create them ourselves.
 
-To use a library, we use the special word `import`. When we import a library, it is read from the hard disk and loaded in memory:
+To use a library, we use the special word `import`. When we import a library, it is read from the hard disk and loaded in memory. Here we import a library called `math`:
 
 ```python
 import math
