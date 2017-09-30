@@ -65,7 +65,7 @@ Note that the example above uses names in all-capitals. This is no different fro
 
 In previous examples, we had variables such as `count`. These changed over time within the program. However colours don't change. Red is always red. Things in your game may change colour, but the concept of a colour doesn't change.
 
-Therefore, it's common within programmers to use all-capitals names to signify things that don't change. We call them **constants**. Compare this with the name **variables**, which signify things whose value may change over time.
+Therefore, it's common among programmers to use all-capitals names to signify things that don't change. We call them **constants**. Compare this with the name **variables**, which signify things whose value may change over time.
 
 ## Challenges
 
