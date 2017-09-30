@@ -59,6 +59,13 @@ GREEN = [0, 255, 0]
 # etc...
 ```
 
+Then we can use the above in our programs by name:
+
+```python
+# The same as screen.fill([255, 0, 0])
+screen.fill(RED)
+```
+
 ## Constants
 
 Note that the example above uses names in all-capitals. This is no different from using all-lowercase names, but we do it because there is a common convention that many programmers use and understand: use all-capitals names for variables that will not change over time.
