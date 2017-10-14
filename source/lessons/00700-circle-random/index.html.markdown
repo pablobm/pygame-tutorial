@@ -1,5 +1,5 @@
 ---
-title: Circle, random, append
+title: Circle and random
 ---
 
 Before we go further, we need to stop again and learn a few things. For the next program, we'll need some new functions that we haven't seen before. Let's see them one by one.
@@ -15,15 +15,15 @@ pygame.draw.circle(screen, color, position, radius)
 The words `screen`, `color`, `position` and `radius` are information that we'll have to provide. This is an example of use:
 
 ```python
+screen = pygame.display.set_mode([800, 600])
 pygame.draw.circle(screen, [255, 255, 255], [100, 100], 10)
 ```
 
-The code above will draw a white circle with a 10-pixel radius at the position x=100 and y=100. You will have to provide a `screen` similar to how we have done before. Write a program to try it out. Then answer these questions:
+The code above will draw a white circle with a 10-pixel radius at the position x=100 and y=100. You will have to provide a `screen` similar to how we have done before. Write a program to try it out. Then try these challenges:
 
-* Why is the circle white?
-* How would you make the circle red?
-* How would you draw the circle at a different position?
-* How would you draw a larger circle?
+1. Make the circle red.
+2. Draw the circle in a different position.
+3. Draw a larger circle.
 
 ## Generating random numbers
 
@@ -33,30 +33,10 @@ In Python, there are several ways of generating random numbers. Regardless of ho
 random.randint(1, 10)
 ```
 
-That code will generate a random number between 1 and 10.
+That code will generate a random number between 1 and 10. Here are some challenges:
 
-* How would you generate a number between 100 and 200?
-* Write a program that generates a random number, puts it in a variable, and then prints the value of the variable.
-
-## Adding things to lists
-
-We have seen how to create lists. Here's how to add things to a list that already exists:
-
-```python
-my_list.append(new_item)
-```
-
-Calling `append` on a list that already exists, you can add a new element at the end of the list. This is an example:
-
-```python
-my_list = [1, 2, 3]
-my_list.append(4)
-print(my_list)
-```
-
-And here's a challenge:
-
-* Write a program that creates a list, adds 100 numbers to it, and then prints the list.
+1. Print the number on screen.
+2. Generate a number between 100 and 200.
 
 ## Putting it all together
 

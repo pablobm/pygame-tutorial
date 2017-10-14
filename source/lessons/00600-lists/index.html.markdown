@@ -59,7 +59,7 @@ Let's try again to build a Pygame program from scratch. Start with a blank Pytho
 1. Import Pygame into the program.
 2. Define the color black as a constant.
 3. Initialize Pygame
-4. Create a screen window and give it a name.
+4. Create a screen window and put it in a variable.
 
 So far, it's all stuff we have done before. Next let's apply some of what we saw in the chapter about objects:
 

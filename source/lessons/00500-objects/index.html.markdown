@@ -33,7 +33,7 @@ The next three lines read as follows:
   * `s` has a name, and it's "Ash".
   * `s` has an age, and it's 10.
 
-This is not very different from creating variables for names and ages as we have done in the past. The thing that is different is that `name` and `age` are going to live inside `s`. We'll use the dot `.` symbol to read and write the student's name and age.
+This is not very different from creating variables for names and ages as we have done before. The thing that is different is that `name` and `age` are going to live inside `s`. We'll use the dot `.` symbol to read and write the student's name and age.
 
 Using the dot `.` symbol, we can access the name and age, same as we do with any other variable. For example, add this to the program:
 
