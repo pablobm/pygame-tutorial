@@ -1,0 +1,19 @@
+.pagination-links {
+  @include main-body-section;
+
+  &__prev {
+    float: left;
+
+    & a::before {
+      content: "\2190";
+    }
+  }
+
+  &__next {
+    float: right;
+
+    & a::after {
+      content: "\2192";
+    }
+  }
+}

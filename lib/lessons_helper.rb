@@ -1,44 +1,61 @@
 module LessonsHelper
   PAGES_BASE_PATH = Pathname(__dir__).join('../source')
-  LESSONS_RELPATH = 'lessons'
+  LESSON_PATH_REGEXP = %r{^lessons/[^/]+/index\.html$}
 
   def all_lessons
-    Pathname(__dir__)
-      .join(PAGES_BASE_PATH, LESSONS_RELPATH)
-      .children
-      .sort
-      .map{|path| Lesson.new(path, sitemap: sitemap) }
+    @all_lessons ||= sitemap.resources
+      .select{|r| r.path =~ LESSON_PATH_REGEXP }
+      .sort_by{|r| r.path }
+      .map{|r| LessonResource.new(r) }
   end
 
-  class Lesson
-    def initialize(fs_path, sitemap:)
-      @fs_path = fs_path
-      @sitemap = sitemap
+  def current_lesson
+    in_lesson? && all_lessons[current_lesson_index]
+  end
+
+  def next_lesson
+    @next_lesson ||= in_lesson? && all_lessons[current_lesson_index + 1]
+  end
+
+  def prev_lesson
+    @prev_lesson ||= begin
+      return nil unless in_lesson?
+      prev_index = current_lesson_index - 1
+      if prev_index >= 0
+        all_lessons[prev_index]
+      else
+        nil
+      end
+     end
+  end
+
+  def current_lesson_index
+    @current_lesson_index ||= all_lessons.find_index{|l| l.path == current_path }
+  end
+
+  def in_lesson?
+    !! current_lesson_index
+  end
+
+  class LessonResource
+    def initialize(resource)
+      @resource = resource
     end
 
     def path
-      to_site_path(fs_path)
+      resource.path
+    end
+
+    def uri
+      '/' + path.gsub(%r{/[^/]+$}, '')
     end
 
     def title
-      sitemap
-        .find_resource_by_destination_path(path_with_file)
-        .data
-        .title
+      resource.data['title']
     end
 
     private
 
-    attr_reader :fs_path, :sitemap
-
-    def path_with_file
-      to_site_path(fs_path.join('index.html'))
-    end
-
-    def to_site_path(file_path)
-      file_path
-        .relative_path_from(PAGES_BASE_PATH)
-        .to_s
-    end
+    attr_reader :resource
   end
 end

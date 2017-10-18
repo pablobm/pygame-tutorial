@@ -13,6 +13,15 @@
     <div class="main-body">
       <h1><%= current_page.data.title %></h1>
       <%= yield %>
+
+      <div class="pagination-links">
+        <% if prev_lesson %>
+          <p class="pagination-links__prev"><%= link_to "Previous: #{prev_lesson.title}", prev_lesson.uri %></p>
+        <% end %>
+        <% if next_lesson %>
+          <p class="pagination-links__next"><%= link_to "Next: #{next_lesson.title}", next_lesson.uri %></p>
+        <% end %>
+      </div>
     </div>
   </body>
 </html>

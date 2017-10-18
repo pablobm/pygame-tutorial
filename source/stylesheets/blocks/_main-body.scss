@@ -6,10 +6,7 @@
 .main-body > ol,
 .main-body__note,
 .main-body > .highlight > pre {
-  margin: 1.5rem auto;
-  width: 90vw;
-  max-width: 40rem;
-  line-height: 1.5em;
+  @include main-body-section;
 }
 
 .main-body > .highlight > pre {
