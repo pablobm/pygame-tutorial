@@ -37,6 +37,10 @@ module LessonsHelper
     !! current_lesson_index
   end
 
+  def lesson_path(lesson)
+    lesson.path.gsub(%r{/[^/]+$}, '')
+  end
+
   class LessonResource
     def initialize(resource)
       @resource = resource
@@ -46,12 +50,12 @@ module LessonsHelper
       resource.path
     end
 
-    def uri
-      '/' + path.gsub(%r{/[^/]+$}, '')
-    end
-
     def title
       resource.data['title']
+    end
+
+    def url
+      resource.url
     end
 
     private

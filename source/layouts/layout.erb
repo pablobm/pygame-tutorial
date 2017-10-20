@@ -16,10 +16,10 @@
 
       <div class="pagination-links">
         <% if prev_lesson %>
-          <p class="pagination-links__prev"><%= link_to "Previous: #{prev_lesson.title}", prev_lesson.uri %></p>
+          <p class="pagination-links__prev"><%= link_to "Previous: #{prev_lesson.title}", prev_lesson.url %></p>
         <% end %>
         <% if next_lesson %>
-          <p class="pagination-links__next"><%= link_to "Next: #{next_lesson.title}", next_lesson.uri %></p>
+          <p class="pagination-links__next"><%= link_to "Next: #{next_lesson.title}", next_lesson.url %></p>
         <% end %>
       </div>
     </div>
