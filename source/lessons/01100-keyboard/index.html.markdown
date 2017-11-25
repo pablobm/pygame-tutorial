@@ -33,5 +33,7 @@ Inside `pygame` there are a bunch of things that represent each key, and we can 
 Let's see how well you understood all that:
 
   * Try the example above in your program. Where do you think it goes?
-  * Add code to the example so that the program closes both when Q is pressed and when the player clicks on the 'close' button of the window.
+  * Add code to the example so that the program closes when either of these things happens:
+    * Q is pressed.
+    * The player clicks the button to close the window.
   * Add code to the example so that it prints messages when pressing the up and down arrow keys.
