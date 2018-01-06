@@ -2,7 +2,7 @@
 title: Keyboard events
 ---
 
-To know when the player has pressed a key, we can use events. When a key is pressed, an event takes place. It will have the type `pygame.KEYDOWN`. To know which specific key it is, we compare it with the possible options. For example:
+Same as with the mouse, when a key is pressed an event is generated: `pygame.KEYDOWN`. To know which specific key it is, we compare it with the possible options. For example:
 
 ```python
 for event in pygame.event.get():
