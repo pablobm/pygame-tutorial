@@ -2,7 +2,7 @@
 title: Mouse events
 ---
 
-To know when the player is using the mouse, we use events. When the players moves the mouse, clicks a button, or presses a key, an event joins the event queue. This event will have the type `pygame.MOUSEMOTION`, and will include other useful information, such as its position, or what buttons were pressed.
+To know when the player is using the mouse, we use events. For example, when the player moves the mouse, an event of type `pygame.MOUSEMOTION` joins the event queue. It will include useful information, such as its position or what buttons were pressed.
 
 This is an example of use:
 
