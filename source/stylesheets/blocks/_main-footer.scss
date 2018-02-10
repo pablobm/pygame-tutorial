@@ -1,6 +1,7 @@
 .main-footer {
   @include base-container;
 
+  clear: both;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   border-top: 1px solid #888;
