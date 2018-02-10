@@ -70,9 +70,11 @@ page '/*.txt', layout: false
 #     'Helping'
 #   end
 # end
+require 'lib/layout_helper'
 require 'lib/lessons_helper'
 
 helpers LessonsHelper
+helpers LayoutHelper
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
