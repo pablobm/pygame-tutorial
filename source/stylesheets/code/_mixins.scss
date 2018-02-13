@@ -1,4 +1,6 @@
 @mixin base-container {
+  clear: both;
+
   > p,
   > h1,
   > h2,

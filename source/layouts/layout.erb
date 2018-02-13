@@ -10,6 +10,11 @@
     <%= stylesheet_link_tag 'styles' %>
   </head>
   <body>
+    <% if in_lesson? %>
+      <div class="main-header">
+        <p><%= link_to "&#x2196; Back to index", '/' %></p>
+      </div>
+    <% end %>
     <div class="main-body">
       <h1><%= current_page.data.title %></h1>
       <%= yield %>
