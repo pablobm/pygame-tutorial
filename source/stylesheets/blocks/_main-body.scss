@@ -1,12 +1,10 @@
-.main-body > p,
-.main-body > h1,
-.main-body > h2,
-.main-body > h3,
-.main-body > ul,
-.main-body > ol,
+.main-body {
+  @include base-container;
+}
+
 .main-body__note,
 .main-body > .highlight > pre {
-  @include main-body-section;
+  @include content-segment;
 }
 
 .main-body > .highlight > pre {

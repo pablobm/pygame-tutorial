@@ -1,5 +1,5 @@
 .pagination-links {
-  @include main-body-section;
+  @include content-segment;
 
   &__prev {
     float: left;

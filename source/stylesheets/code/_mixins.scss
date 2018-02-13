@@ -1,4 +1,17 @@
-@mixin main-body-section {
+@mixin base-container {
+  clear: both;
+
+  > p,
+  > h1,
+  > h2,
+  > h3,
+  > ul,
+  > ol {
+    @include content-segment;
+  }
+}
+
+@mixin content-segment {
   margin: 1.5rem auto;
   width: 90vw;
   max-width: 40rem;
