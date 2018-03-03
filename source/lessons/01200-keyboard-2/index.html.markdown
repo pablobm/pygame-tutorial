@@ -28,7 +28,7 @@ This example uses `pygame.K_LEFT` same as we were using it earlier with events. 
 
 ## Should we use keyboard events or not?
 
-So there are two ways of reading the keyboard. Which one is better? The answer is "it depends". You will use one or the other depending on the situation.
+As you can see, there are two ways of reading the keyboard. Which one is better? The answer is "it depends". You will use one or the other depending on the situation.
 
   * If the key can be kept pressed for a continuous action, use `pygame.key.get_pressed()`. For example, for movement.
-  * If the key should be pressed only once at a time, for a quick action, use events. For example, for a jump, or a throw.
+  * If the key should be pressed only once at a time, use events. For example, for a jump or a throw, or for pausing the game.
