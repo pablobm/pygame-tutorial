@@ -16,8 +16,8 @@ star_list = []
 i = 0
 while i < NUM_STARS:
     new_star = Star()
-    new_star.x = random.randint(0, 800)
-    new_star.y = random.randint(0, 600)
+    new_star.x = random.randint(0, SCREEN_WIDTH)
+    new_star.y = random.randint(0, SCREEN_HEIGHT)
     new_star.size = random.randint(1, 3)
     new_star.speed = random.randint(1, 3)
     new_star.brightness = random.randint(0, 255)
@@ -29,6 +29,29 @@ def move_x(sprite, change):
 
 def move_y(sprite, change):
     sprite.y = sprite.y + change
+
+def move_stars(star_list):
+    for star in star_list:
+        if star.y > SCREEN_HEIGHT:
+            star.y = 0
+            star.x = random.randint(0, SCREEN_WIDTH)
+        else:
+            move_y(star, star.speed)
+
+def blank_screen(screen):
+    screen.fill(BLACK)
+
+def draw_stars(screen, star_list):
+    for star in star_list:
+        color = [star.brightness, star.brightness, star.brightness]
+        position = [star.x, star.y]
+        pygame.draw.circle(screen, color, position, star.size)
+
+def draw_sprite(screen, sprite):
+    screen.blit(sprite.image, [sprite.x, sprite.y])
+
+def draw_scene():
+    pygame.display.flip()
 
 class Sprite:
     pass
@@ -56,20 +79,8 @@ while True:
     if keys[pygame.K_UP]:
         move_y(player, -5)
 
-    for star in star_list:
-        if star.y > 600:
-            star.y = 0
-            star.x = random.randint(0, 800)
-        else:
-            star.y = star.y + star.speed
-
-    screen.fill(BLACK)
-
-    for star in star_list:
-        color = [star.brightness, star.brightness, star.brightness]
-        position = [star.x, star.y]
-        pygame.draw.circle(screen, color, position, star.size)
-
-    screen.blit(player.image, [player.x, player.y])
-
-    pygame.display.flip()
+    move_stars(star_list)
+    blank_screen(screen)
+    draw_stars(screen, star_list)
+    draw_sprite(screen, player)
+    draw_scene()
