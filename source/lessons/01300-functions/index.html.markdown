@@ -2,7 +2,7 @@
 title: Functions
 ---
 
-We have written a bunch of code so far, and our program is starting to look a bit confusing. There's a lot going on, and it can be difficult to read. Maybe you understand it well now, but if you leave it for a week or two and then come back, you'll have forgotten part of it, and you'll have to read it again to remember what was going on. Also, if you decided to team up with someone else to develop this game, they'd have to figure it out from scratch, reading all that code.
+We have written a bunch of code so far, and our program is starting to look a bit confusing. There's a lot going on, and it can be difficult to read. Maybe you understand it well now, but if you leave it for a week or two and then come back, you'll have forgotten part of it. You'll have to read it again to remember what was going on. Also, if you decided to team up with someone else to develop this game, they'd have to figure it out from scratch, reading all that code.
 
 At this point, we should take a step back for a moment and see how we can tidy this up. Neater code is easier for us and others to understand and extend. One tool to help us with this is *functions*.
 
@@ -36,7 +36,7 @@ if keys[pygame.K_UP]:
 
 Here we have changed the operations so that now they look like something that can be easier to read: `move_x` and `move_y`. But where do those instructions come from?
 
-Those instructions are "function calls", and they don't exist yet. If you try to run the game now, it will break because it doesn't know what `move_x` and `move_y` means. We need to define what they mean. We need to create *functions* with those names.
+Those instructions are "function calls", and they don't exist yet. If you try to run the game now, it will break because it doesn't know what `move_x` and `move_y` mean. We need to define what they mean. We need to create *functions* with those names.
 
 ## Defining and using functions
 
@@ -51,7 +51,7 @@ This is an example of a *function definition*. It reads like follows:
 
 1. `def` indicates that this is a function definition.
 2. `move_x` will be the name of the function. Later we'll use it elsewhere in our code by writing "`move_x` something something".
-3. Next comes a list of the information that the function needs to do its work. In this specific case, we need two pieces of information, which we call `sprite` and `change`.
+3. Next, between round brackets, comes a list of the information that the function needs to do its work. In this specific case, we need two pieces of information, which we call `sprite` and `change`.
 4. Finally we have the "body" of the function, which is the part where we do maths with the `sprite` and the `change`.
 
 How do we use this? Well, wherever you had something like this:
@@ -76,7 +76,7 @@ That is called a "function call". It goes like follows:
 
 ### A quick challenge
 
-Write the function `move_y`, and use it in the code, same as we have done with `move_x` above.
+Write the function `move_y`, and use it in the code, same as we have done with `move_x` above. Run the program to check it works.
 
 ## Reusing functions
 
@@ -163,13 +163,23 @@ In fact, many other things we are using in our code are functions too: `random.r
 
 ## Challenges
 
-* Write a function `draw_scene`. It will "flip" the screen to show all the changes in each new frame (see `pygame.display.flip()` at the end of your code. Use this function in your code.
-* Write a function `blank_screen`. It will receive the screen and will colour it completely black. Use this function in your code.
+* Write a function called `draw_scene`. It will "flip" the screen to show all the changes in each new frame (see `pygame.display.flip()` at the end of your code). Use this function in your code.
+* Write a function `blank_screen`. It will receive the screen and will paint it completely black. Use this function in your code.
 * Write a function `draw_stars`. It will receive the screen and the list of stars, and will draw the stars on the screen. Use this function in your code.
 * Write a function `draw_player`. It will receive the screen and the player sprite, and will draw the player on the screen. Use this function in your code.
 
 ## Was all this worth it?
 
-If you completed the challenges, you should have code that looks very similar to this:
+If you completed the challenges, you should have a section of code that looks very similar to this:
 
+```python
+move_stars(star_list)
+blank_screen(screen)
+draw_stars(screen, star_list)
+draw_sprite(screen, player)
+draw_scene()
+```
 
+This is much easier to read and follow than we had before, and makes the `while` loop shorter. It may feel like we have swept the code under the carpet, moving it to functions. This is partly true, but now each of the functions is also easier to read and has a clear title (the name of the function) that describes what it's supposed to do.
+
+Going forward, we'll want to use functions as often as possible. They make programming much easier, even if first we have think a bit more about how to best take advante og them.
