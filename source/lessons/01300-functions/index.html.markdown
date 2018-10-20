@@ -128,7 +128,7 @@ So far, we have created functions that we use in the main body of our code. We c
 
 This is a piece of code that we could make clearer, it moves all the stars down, bringing them back to the top when they touch the bottom:
 
-```js
+```python
 for star in star_list:
     if star.y > SCREEN_HEIGHT:
         star.y = 0
@@ -139,7 +139,7 @@ for star in star_list:
 
 We can can move it all into a function, pretty much verbatim:
 
-```js
+```python
 def move_stars(star_list):
     for star in star_list:
         if star.y > SCREEN_HEIGHT:
@@ -151,7 +151,7 @@ def move_stars(star_list):
 
 And then we simply call it like this:
 
-```js
+```python
 move_stars(star_list)
 ```
 
