@@ -182,4 +182,4 @@ draw_scene()
 
 This is much easier to read and follow than we had before, and makes the `while` loop shorter. It may feel like we have swept the code under the carpet, moving it to functions. This is partly true, but now each of the functions is also easier to read and has a clear title (the name of the function) that describes what it's supposed to do.
 
-Going forward, we'll want to use functions as often as possible. They make programming much easier, even if first we have think a bit more about how to best take advante og them.
+Going forward, we'll want to use functions as often as possible. They make programming much easier, even if first we have think a bit more about how to best take advante of them.
