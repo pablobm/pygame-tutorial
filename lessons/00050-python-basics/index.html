@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Python basics</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Python basics</h1>
+      <p>Before we get on with Pygame, we need to understand some basic concepts. These are:</p>
+
+<ol>
+<li>Comments</li>
+<li>Variables</li>
+<li>Functions</li>
+<li>Libraries</li>
+</ol>
+
+<p>The above are concepts that exist in most programming languages, with subtle differences. Here we&#39;ll learn how they work in Python.</p>
+
+<h2>Comments</h2>
+
+<p>In a program, there&#39;s the concept of &quot;comments&quot;. Comments are not really code. They are parts of the program where we write something down in plain English, to help us or others understand what&#39;s going on.</p>
+
+<p>In Python, comments start with a hash character <code>#</code>. This is an example:</p>
+
+<p>You will see comments in the examples here. They are there only to guide you and don&#39;t have any special meaning.</p>
+
+<h2>Variables</h2>
+
+<p>Computer programs deal with data. &quot;Data&quot; can be numbers, pieces of text, on/off states, etc, that the program keeps in memory. For example, the game <em>Minecraft</em> needs to keep track of a bunch of things, such as:</p>
+
+<ul>
+<li>Your energy (a number).</li>
+<li>The time of the day (a number).</li>
+<li>Your position (three numbers).</li>
+<li>The position of anything in the game (three numbers for each single thing).</li>
+<li>The name of a save slot (a list of numbers, each representing a letter, together forming words).</li>
+<li>A block (five numbers: three for the position, one that tells the block type, one to tell the damage it has received).</li>
+<li>And many, many more things, one for each single concept in the game.</li>
+</ul>
+
+<p>This is an example of variable:</p>
+
+<p>The code above creates a variable. We called it <code>energy</code> and decided its value was going to be 100. We could have called it anything else, or given it a different value (a different number).</p>
+
+<p>Variables can have almost any name we can think of, with some restrictions. One restriction is that they cannot have spaces. It&#39;s possible to use underscores to have multiple words though:</p>
+
+<p>You can do math with variables. If the initial energy is 100 and an arrow takes 20 units from you, you could do this:</p>
+
+<p>We give descriptive names to variables to help us remember what&#39;s going on in the program. We can use variables in our math to get something like this:</p>
+
+<p>Finally, they are called &quot;variables&quot; because they change. The game is more likely to go like this:</p>
+
+<p>In the code above, the variable <code>player_energy</code> started as 100, then changed to 80.</p>
+
+<div class="main-body__note"><div class="main-body__note-body">
+<p>When we say `energy = 100`, this is not the same "equals" `=` that you normally use in math. The `energy` will not always be `100`. It will change over time.</p>
+<p>Thing of it as "the `energy` is `100` for now".</p>
+</div></div>
+
+<h2>Functions</h2>
+
+<p>Variables store data, but they don&#39;t do anything. To do stuff we use functions.</p>
+
+<p>This is an example of a function being used:</p>
+
+<p>The function is <code>print</code>, and we use it by writing parentheses (round brackets) after it.</p>
+
+<p><code>print</code> is used to show things on a terminal screen. In the example above we don&#39;t actually show anything, because we are not telling <code>print</code> what so show.</p>
+
+<p>Functions use data. If we give data to <code>print</code>, it will print it out. The following program prints number 10 on the terminal:</p>
+
+<p>The program tells the function <code>print</code> to use number 10. In programmer&#39;s lingo, we say that we pass <code>10</code> to the function, and that the function &quot;receives&quot; <code>10</code>. We can also use variables, or do math:</p>
+
+<p>Write the program above and run it. What does it do?</p>
+
+<p>Functions can take more than one piece of data. Here we print two numbers:</p>
+
+<p>When passing more than one piece of data to a function, we use a comma <code>,</code> to separate them.</p>
+
+<h2>Libraries</h2>
+
+<p>Libraries are collections of functions that we can use in our programs. Python comes bundled with many libraries, and we can download more or even create them ourselves.</p>
+
+<p>To use a library, we use the special word <code>import</code>. When we import a library, it is read from the hard disk and loaded in memory. Here we import a library called <code>math</code>:</p>
+
+<p>The library <code>math</code> comes included with Python, and has functions to do complex math.</p>
+
+<p>When we import a library, a variable of the same name is created on our project. For example, we imported <code>math</code>, so we get a variable called <code>math</code>. Inside this variable, we can find functions. To look inside a variable, we use the full stop symbol <code>.</code>. This example uses a function to calculate the factorial of 10:</p>
+
+<p>Some things happening here:</p>
+
+<ul>
+<li>We import <code>math</code> into our program.</li>
+<li>The function <code>factorial</code> lives in <code>math</code>.</li>
+<li>We use the full stop <code>.</code> symbol to reach inside <code>math</code> and get to the <code>factorial</code> function.</li>
+<li>We use <code>factorial</code> and pass it a <code>10</code>.</li>
+<li>The factorial has a result. We store it in a variable that we call <code>result</code> (it can have any name).</li>
+<li>We can see the result by printing it.</li>
+</ul>
+
+<p>Another example, a bit more complicated:</p>
+
+<p>More notes on that:</p>
+
+<ul>
+<li>We pass two numbers to <code>math.pow</code></li>
+<li><code>math.pow</code> raises the first number to the power of the second (in this example, 2 to the power of 3).</li>
+<li>We print the result straightaway, without bothering with storing it on a variable first.</li>
+</ul>
+
+<h2>Challenge</h2>
+
+<p>Write a program that does the following:</p>
+
+<ol>
+<li>Import the <code>time</code> library</li>
+<li>Print a number (any number)</li>
+<li>Use the function <code>sleep</code> in the <code>time</code> library. Pass it the number 5.</li>
+<li>Print a number (again, any number is ok)</li>
+</ol>
+
+<p>What does the program do? What does <code>sleep</code> do?</p>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00100-simplest-pygame-program/">Next: The simplest possible Pygame program</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

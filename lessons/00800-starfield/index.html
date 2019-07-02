@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Star field</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Star field</h1>
+      <p>So we have many things on the screen. Let&#39;s move them and try to create something useful. We can draw small circles moving down the screen and simulate a star field.</p>
+
+<h2>A bit of theory: conditionals</h2>
+
+<p>You may have seen this before, but it&#39;s good to refresh our memories. Type down the following program:</p>
+
+<ul>
+<li>What does the program do?</li>
+<li>How can you change the first line so that a different message is printed?</li>
+</ul>
+
+<h2>Flying though space</h2>
+
+<p>We can now use all we have learned so far to create a star field animation. As usual, start a new program from scratch that does the following:</p>
+
+<ol>
+<li>Import the <code>random</code> library.</li>
+<li>Import Pygame.</li>
+<li>Define a class <code>Star</code>.</li>
+<li>Create an empty list where we&#39;ll put our stars.</li>
+<li>Write a loop that will run 100 times. Each time it will do the following:
+
+<ol>
+<li>Create a <code>Star</code> object and put it in a variable.</li>
+<li>Give the star a random <code>x</code> coordinate, between 0 and 800.</li>
+<li>Give the star a random <code>y</code> coordinate, between 0 and 600.</li>
+<li>Give the star a random <code>size</code>, between 1 and 3.</li>
+<li>Give the star a random <code>speed</code>, between 1 and 3.</li>
+<li>Give the star a random <code>brightness</code>, between 0 and 255.</li>
+<li>Add the object to the list of stars.</li>
+</ol></li>
+<li>Initialize Pygame</li>
+<li>Create a window of size 800x600</li>
+<li>Write a loop that will run 500 times. On each iteration, do the following:
+
+<ol>
+<li>Paint the screen completely black</li>
+<li>For each star in the list, do the following:
+
+<ol>
+<li>Draw a circle on the screen so that:
+
+<ul>
+<li>The radius is the size of the star</li>
+<li>The colour is the brightness of the star, three times as a list. Eg: if the brightness is <code>150</code>, the colour will be <code>[150, 150, 150]</code>.</li>
+<li>The position uses the <code>x</code> and <code>y</code> values for the star.</li>
+</ul></li>
+<li>Change the <code>y</code> coordinate of the star so that:
+
+<ul>
+<li>If it is less than 600, it increases by 1</li>
+<li>Otherwise, it is set to 0</li>
+</ul></li>
+</ol></li>
+<li>Update the screen</li>
+</ol></li>
+</ol>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00700-circle-random/">Previous: Circle and random</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00900-events-intro/">Next: Intoduction to events</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

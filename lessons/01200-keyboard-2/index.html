@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Keyboard without events</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Keyboard without events</h1>
+      <p>There are actually two different ways of checking if the player is pressing keys. One is with events, as we have seen. We&#39;ll see the second one next.</p>
+
+<p>The function <code>pygame.key.get_pressed()</code> will get us a list of all keys that are pressed at the time. We use it like this:</p>
+
+<p>This is how the above works:</p>
+
+<ol>
+<li>We get the list of the keys that are pressed right now. We put it in the variable <code>keys</code>.</li>
+<li>We look into this list using square brakets. With <code>keys[pygame.K_LEFT]</code> we check if the left arrow was pressed.</li>
+<li>If this is true (if the left arrow was pressed), we print a message.</li>
+</ol>
+
+<p>This example uses <code>pygame.K_LEFT</code> same as we were using it earlier with events. The same will work for any other key.</p>
+
+<h2>Challenges</h2>
+
+<ul>
+<li>Use <code>pygame.key.get_pressed</code> to program the movement of a character (an image) on the screen.</li>
+<li>Ensure that you can also close the program by clicking on the &quot;close&quot; button of the window, or pressing Q, using events.</li>
+<li>Integrate the starfield of previous chapters on this game, so that the stars serve as background to your character.</li>
+</ul>
+
+<h2>Should we use keyboard events or not?</h2>
+
+<p>As you can see, there are two ways of reading the keyboard. Which one is better? The answer is &quot;it depends&quot;. You will use one or the other depending on the situation.</p>
+
+<ul>
+<li>If the key can be kept pressed for a continuous action, use <code>pygame.key.get_pressed()</code>. For example, for movement.</li>
+<li>If the key should be pressed only once at a time, use events. For example, for a jump or a throw, or for pausing the game.</li>
+</ul>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/01100-keyboard/">Previous: Keyboard events</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/01300-functions/">Next: Functions</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

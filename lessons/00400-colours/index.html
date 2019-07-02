@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Colours</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Colours</h1>
+      <p>In the previous section, we used the following code to fill the screen black before painting a new frame:</p>
+
+<p>That line tells the screen to fill in the colour black. The numbers <code>[0, 0, 0]</code> represent the colour black, but what do the numbers have to do with the colour?</p>
+
+<p>The most common way to represent colours in computers is using three numbers. These numbers tell how much red, green and blue light needs to be mixed together to give a specific color. For example, black is <code>[0, 0, 0]</code>, representing zero amounts of red light, green light and blue light. No light at all. As dark as it can be.</p>
+
+<p>This way of representing colours with numbers is called RGB, standing for Red, Green, Blue. There are other ways of representing colours, always using three or four numbers. RGB is the most common system, especially when making video games.</p>
+
+<p>In terms of RGB, &quot;pure&quot; red will only have red. &quot;Pure&quot; green will only have green. &quot;Pure&quot; blue will only have blue. This is how to represent those colours with numbers:</p>
+
+<ul>
+<li>Red: <code>[255, 0, 0]</code></li>
+<li>Green: <code>[0, 255, 0]</code></li>
+<li>Blue: <code>[0, 0, 255]</code></li>
+</ul>
+
+<h2>Challenges</h2>
+
+<ul>
+<li>Paint the screen red</li>
+<li>Paint the screen green</li>
+<li>Paint the screen blue</li>
+<li>Try with other numbers</li>
+</ul>
+
+<div class="main-body__note"><div class="main-body__note-body">
+<p>The number 255 is the maximum number we can use. When representing a colour, each of the three numbers must be between 0 and 255. The number 255 seems a bit random, but it is not arbitrary: it is a limit given by how all this works internally. Don't worry about that for now. Just know that 255 is the maximum possible value in many programming-related measures.</p>
+</div></div>
+
+<h2>Mixing colours</h2>
+
+<p>To get other colours, we mix red, green and blue. For example:</p>
+
+<ul>
+<li>Yellow: <code>[255, 255, 0]</code></li>
+<li>Magenta: <code>[255, 0, 255]</code></li>
+<li>Cyan: <code>[0, 255, 255]</code></li>
+<li>Brown: <code>[80, 40, 25]</code></li>
+<li>Pink: <code>[255, 200, 200]</code></li>
+</ul>
+
+<h2>Challenges</h2>
+
+<ol>
+<li>How do you paint the screen white? Hint: white is all colours together, cranked up to the max</li>
+<li>How many different colours can you possibly get with this system?</li>
+</ol>
+
+<h2>These numbers are annoying</h2>
+
+<p>Don&#39;t worry about the numbers too much. You should know what they mean, but there&#39;s no need to memorise each combination. When you need a colour, you can just look it up on the Internet by name and copy its RGB values. There are many websites where you will find them.</p>
+
+<p>To avoid typing down the numbers every time, you can give names to colours. For example:</p>
+
+<p>Then we can use the above in our programs by name:</p>
+
+<h2>Constants</h2>
+
+<p>Note that the example above uses names in all-capitals. This is no different from using all-lowercase names, but we do it because there is a common convention that many programmers use and understand: use all-capitals names for variables that will not change over time.</p>
+
+<p>In previous examples, we had variables such as <code>count</code>. These changed over time within the program. However colours don&#39;t change. Red is always red. Things in your game may change colour, but the concept of a colour doesn&#39;t change.</p>
+
+<p>Therefore, it&#39;s common among programmers to use all-capitals names to signify things that don&#39;t change. We call them <strong>constants</strong>. Compare this with the name <strong>variables</strong>, which signify things whose value may change over time.</p>
+
+<h2>Challenges</h2>
+
+<ol>
+<li>Think of a few colours and look them up on the Internet. Find their RGB values and create constants to refer to them. Use them in your program.</li>
+<li>Modify your program so that the background starts black, and changes gradually to white.</li>
+</ol>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00300-movement/">Previous: Creating movement</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00500-objects/">Next: Objects</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

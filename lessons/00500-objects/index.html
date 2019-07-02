@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Objects</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Objects</h1>
+      <p>Before we go further, we need to stop a moment to organise our code a bit better. This will help us later to deal with many things moving at the same time.</p>
+
+<h2>A bit of theory: objects</h2>
+
+<p>Until now, we have had one thing moving around the screen. This thing had three qualities that defined it:</p>
+
+<ul>
+<li>A horizontal position.</li>
+<li>A vertical position.</li>
+<li>An image that represents it on the screen.</li>
+</ul>
+
+<p>When things have several qualities, it&#39;s useful to store them together. This becomes helpful later as it makes it easier to know what belongs to what. In many programming languages, we have &quot;objects&quot; that help us do exactly that.</p>
+
+<p>Start a new, blank program and type the following:</p>
+
+<p>The two first lines define a new &quot;class&quot; of &quot;objects&quot;. You can read it as &quot;some things in this program are going to be &#39;students&#39;&quot;. It may sound a bit weird, but it&#39;ll be useful later. Don&#39;t worry too much, you don&#39;t have to understand it completely.</p>
+
+<p>The next three lines read as follows:</p>
+
+<ul>
+<li>Create a new student and put it on a variable called <code>s</code>.</li>
+<li><code>s</code> has a name, and it&#39;s &quot;Ash&quot;.</li>
+<li><code>s</code> has an age, and it&#39;s 10.</li>
+</ul>
+
+<p>This is not very different from creating variables for names and ages as we have done before. The thing that is different is that <code>name</code> and <code>age</code> are going to live inside <code>s</code>. We&#39;ll use the dot <code>.</code> symbol to read and write the student&#39;s name and age.</p>
+
+<p>Using the dot <code>.</code> symbol, we can access the name and age, same as we do with any other variable. For example, add this to the program:</p>
+
+<p>So nothing new. Only that now we are putting variables inside other variables to help us organise the program better. There&#39;s a lot more that can be done with objects, but we can do just with this for the moment.</p>
+
+<h2>Back to Pygame: using an object in our game</h2>
+
+<p>We are going to create an object that will represent our moving image. A moment ago we used an object that had a name and an age. Now we are going to have an object that has horizontal and vertical positions (<code>x</code> and <code>y</code>), and an image.</p>
+
+<p>Go back to your Pygame program and try make the following changes:</p>
+
+<ul>
+<li>Before the main loop:
+
+<ul>
+<li>The things that move on screen on our program are going to be called &quot;actors&quot;. Define a class called <code>Actor</code>. <em>(2 new lines).</em></li>
+<li>Create a variable representing an actor. <em>(1 new line).</em></li>
+<li>We had a variable for our image. Change it so that it is stored inside our actor instead. <em>(modify one existing line).</em></li>
+<li>Set the <code>x</code> and the <code>y</code> of the actor. Make them <code>0</code> at the start. <em>(2 new lines, one for each coordinate).</em></li>
+</ul></li>
+<li>In the main loop:
+
+<ul>
+<li>Change the <code>x</code> coordinate of the actor so that it increases by 1 on each iteration of the loop. <em>(1 new line).</em></li>
+<li>Modify the <code>screen.blit</code> line so that it works with our new object. <em>(modify the existing line).</em></li>
+</ul></li>
+</ul>
+
+<p>If everything goes according to plan, the program should do exactly the same thing it was doing before. This was not about adding something to the program, but about organising things before we go forward.</p>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00400-colours/">Previous: Colours</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00600-lists/">Next: Lists, part 1</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Functions</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Functions</h1>
+      <p>We have written a bunch of code so far, and our program is starting to look a bit confusing. There&#39;s a lot going on, and it can be difficult to read. Maybe you understand it well now, but if you leave it for a week or two and then come back, you&#39;ll have forgotten part of it. You&#39;ll have to read it all of it again to remember where you were. Also, if you decided to team up with someone else to develop this game, they&#39;d have to figure it out from scratch, reading all that code.</p>
+
+<p>At this point, we should take a step back for a moment and see how we can tidy this up. Neater code is easier for us and others to understand and extend. One tool to help us with this is <em>functions</em>.</p>
+
+<h2>Repetitive code</h2>
+
+<p>To understand functions, it&#39;s better to go by example. Have a look at this chunk of code from our game:</p>
+
+<p>This code checks if specific keys are pressed, and then moves the player horizontally or vertically. It&#39;s a bit difficult to read though. One possible improvement would be to write it like this:</p>
+
+<p>Here we have changed the operations so that now they look like something that can be easier to read: <code>move_x</code> and <code>move_y</code>. But where do those instructions come from?</p>
+
+<p>Those instructions are &quot;function calls&quot;, and they don&#39;t exist yet. If you try to run the game now, it will break because it doesn&#39;t know what <code>move_x</code> and <code>move_y</code> mean. We need to define what they mean. We need to create <em>functions</em> with those names.</p>
+
+<h2>Defining and using functions</h2>
+
+<p>Add this to your program, near the top but after the <code>import</code> lines:</p>
+
+<p>This is an example of a <em>function definition</em>. It reads like follows:</p>
+
+<ol>
+<li><code>def</code> indicates that this is a function definition.</li>
+<li><code>move_x</code> will be the name of the function. Later we&#39;ll use it elsewhere in our code by writing &quot;<code>move_x</code> something something&quot;.</li>
+<li>Next, between round brackets, comes a list of the information that the function needs to do its work. In this specific case, we need two pieces of information, which we call <code>sprite</code> and <code>change</code>.</li>
+<li>Finally we have the &quot;body&quot; of the function, which is the part where we do math with the <code>sprite</code> and the <code>change</code>.</li>
+</ol>
+
+<p>How do we use this? Well, wherever you had something like this:</p>
+
+<p>You can now instead write this:</p>
+
+<p>That is called a &quot;function call&quot;. It goes like follows:</p>
+
+<ol>
+<li>The function <code>move_x</code> is &quot;called&quot; and given two pieces of information: <code>something</code> and <code>something_else</code></li>
+<li>The program jumps to where the function definition for <code>move_x</code> is.</li>
+<li>At the function definition, <code>something</code> becomes <code>sprite</code>, and <code>something_else</code> becomes <code>change</code>. These are the two pieces of information that the function expected.</li>
+<li>The function runs the code in the body: <code>sprite.x = sprite.x + change</code>.</li>
+<li>When the code in the body ends, the program jumps back to the place where the function was called from.</li>
+</ol>
+
+<h3>A quick challenge</h3>
+
+<p>Write the function <code>move_y</code>, and use it in the code, same as we have done with <code>move_x</code> above. Run the program to check it works.</p>
+
+<h2>Reusing functions</h2>
+
+<p>In the example above, the functions <code>move_x</code> and <code>move_y</code> are used twice each. Functions can be used and reused in many locations, as long as they make sense. For example, we can use <code>move_y</code> in the code that moves the stars. Initially, that code looks like this:</p>
+
+<p>Pay attention to the last line. It reads:</p>
+
+<p>This fits the following template:</p>
+
+<p>And therefore, it can be rewritten using the function <code>move_y</code>, like this:</p>
+
+<p>So the code to move the stars ends up reading like this:</p>
+
+<p>That reads a little bit better. Not a whole lot better, but it&#39;s definitely an improvement. Step by step we can make the code easier to understand.</p>
+
+<h2>Functions that call other functions (that call other functions)</h2>
+
+<p>So far, we have created functions that we use in the main body of our code. We can also use functions inside other functions, without limit. Let&#39;s carry on tidying up the code and see what this means.</p>
+
+<p>This is a piece of code that we could make clearer, it moves all the stars down, bringing them back to the top when they touch the bottom:</p>
+
+<p>We can can move it all into a function, pretty much verbatim:</p>
+
+<p>And then we simply call it like this:</p>
+
+<p>Make that change to the code. Do you know where the above goes?</p>
+
+<p>Note that now we have a function <code>move_stars</code> that calls another function <code>move_y</code>. We are using a function within a function, and that&#39;s fine.</p>
+
+<p>In fact, many other things we are using in our code are functions too: <code>random.randint</code>, <code>pygame.display.set_mode</code>, <code>screen.blit</code>, etc. They are just functions that Python and Pygame provide by default.</p>
+
+<h2>Challenges</h2>
+
+<ul>
+<li>Write a function called <code>draw_scene</code>. It will &quot;flip&quot; the screen to show all the changes in each new frame (see <code>pygame.display.flip()</code> at the end of your code). Use this function in your code.</li>
+<li>Write a function <code>blank_screen</code>. It will receive the screen and will paint it completely black. Use this function in your code.</li>
+<li>Write a function <code>draw_stars</code>. It will receive the screen and the list of stars, and will draw the stars on the screen. Use this function in your code.</li>
+<li>Write a function <code>draw_player</code>. It will receive the screen and the player sprite, and will draw the player on the screen. Use this function in your code.</li>
+</ul>
+
+<h2>Was all this worth it?</h2>
+
+<p>If you completed the challenges, you should have a section of code that looks very similar to this:</p>
+
+<p>This is much easier to read and follow than we had before, and makes the <code>while</code> loop shorter. It may feel like we have swept the code under the carpet, moving it to functions. This is partly true, but now each of the functions is also easier to read and has a clear title (the name of the function) that describes what it&#39;s supposed to do.</p>
+
+<p>Going forward, we&#39;ll want to use functions as often as possible. They make programming much easier, even if first we have think a bit more about how to best take advante of them.</p>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/01200-keyboard-2/">Previous: Keyboard without events</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

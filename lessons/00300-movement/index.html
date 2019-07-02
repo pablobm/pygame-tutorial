@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Creating movement</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Creating movement</h1>
+      <p>To get images moving, we&#39;ll need to draw them many times, very fast, each time in a slightly different position. This way, we create an illusion of an object moving. We can use a loop to get this effect.</p>
+
+<h2>A bit of theory: Loops</h2>
+
+<p>In Python, the word <code>while</code> is used to create a loop. Start a new program from scratch. Type it as follows:</p>
+
+<ol>
+<li>Run the program. What does it do?</li>
+<li>How does it work?</li>
+</ol>
+
+<h2>Back to Pygame: Moving the image</h2>
+
+<p>We had to stop for a moment to learn loops because we need them to create animations. Now let&#39;s go back to the program we were writing with Pygame. It&#39;s time to use this knowledge.</p>
+
+<p>Here&#39;s a list of steps. Each one explains a line of the program we are going to write.
+Translate each step into a line of code (revisit the previous lessons to remember how to do all this):</p>
+
+<ol>
+<li>Import Pygame into the program</li>
+<li>Initialize Pygame</li>
+<li>Create a screen window and give it a name</li>
+<li>Load an image into memory</li>
+</ol>
+
+<p>When you are done with it, it&#39;s time to make the image move. To this program we just wrote, we are going to add code to do the following:</p>
+
+<ul>
+<li>Draw the image on the screen 100 times, in different positions</li>
+</ul>
+
+<p>This is not going to be only one line of code, but several. You will have to combine the following:</p>
+
+<ul>
+<li>The code for the loop at the beginning of this chapter.</li>
+<li>Code to draw images on the screen as seen on previous chapters.</li>
+</ul>
+
+<p>Go on, give it a whirl.</p>
+
+<h2>Deleting the previous frame</h2>
+
+<p>If you did everything correctly, you should have an image moving across the screen, but leaving a &quot;wake&quot; behind it. How can we avoid this?</p>
+
+<p>The problem here is that we are drawing on top of the previous screen. Instead, we need to make sure that the screen is deleted before we start painting a new frame. You can use the following piece of code, which paints the whole screen black:</p>
+
+<p>Where do you think that line should go?</p>
+
+<h2>Challenges</h2>
+
+<ol>
+<li>Get the image moving horizontally.</li>
+<li>Get the image moving vertically.</li>
+<li>Get the image moving diagonally.</li>
+<li>Any one of the above, but faster.</li>
+<li>Get the image to start from the bottom right corner and move up.</li>
+<li>Get the two identical images moving on the screen in different directions.</li>
+<li>Get two different images moving on the screen in different directions.</li>
+</ol>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00200-draw-image-on-screen/">Previous: Drawing something on the screen</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00400-colours/">Next: Colours</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

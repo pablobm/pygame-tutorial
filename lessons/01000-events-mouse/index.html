@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Mouse events</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Mouse events</h1>
+      <p>To know when the player is using the mouse, we use events. For example, when the player moves the mouse, an event of type <code>pygame.MOUSEMOTION</code> joins the event queue. It will include useful information, such as its position or what buttons were pressed.</p>
+
+<p>This is an example of use:</p>
+
+<p>This is what the program does:</p>
+
+<ol>
+<li>It loops through every event in the event queue.</li>
+<li>For each event, it checks if its about mouse movement.</li>
+<li>If it&#39;s about mouse movement, we print a message telling us, as well as two other messages reporting its position.</li>
+</ol>
+
+<p>Challenges:</p>
+
+<ul>
+<li>Try the example above in your program. Where do you think it goes?</li>
+<li>Ensure that the program responds both to mouse movement and to the window being closed.</li>
+</ul>
+
+<h2>The position of the mouse (and a bit about lists)</h2>
+
+<p>The example above does something strange to read the position. It uses <code>event.pos[0]</code> and <code>event.pos[1]</code>, which look a bit complicated. Let&#39;s look into that.</p>
+
+<p>Each <code>event</code> comes with a few things inside. For example, it has <code>event.type</code>, which tells what type of event it is. Remember that the dot <code>.</code> means &quot;inside&quot;, so the <code>type</code> is something inside <code>event</code>, therefore we use it as <code>event.type</code>. The same with <code>MOUSEMOTION</code>: it lives inside <code>pygame</code>, so we refer to it as <code>pygame.MOUSEMOTION</code>.</p>
+
+<p>Apart from the type, each event will have other things inside, which depend on the type of event. A <code>MOUSEMOTION</code> event has a <code>pos</code>, which is the position of the mouse. This position is represented as a list of two elements: X and Y.</p>
+
+<p>Remember how lists work? This is an example of a list with two elements:</p>
+
+<p>We have seen how to loop through a list and do something with each element, but we haven&#39;t seen how to work with a specific element of the list. For example, how to do something only with the first element, or only with the hundredth element. Let&#39;s see that.</p>
+
+<p>Computers have a funny way to count. When people count (for example with their fingers), we start counting at 1, and then go 2, 3, 4... Computers don&#39;t do that: they normally start at 0 and then go 1, 2, 3... This is important now. For a computer, the first element of a list is the element number 0, and the second element is the element number 1. The 100th element is element 99 and so on.</p>
+
+<p>We can read inside a list using square brackets <code>[]</code> and a number, like this:</p>
+
+<h2>Challenges</h2>
+
+<p>Let&#39;s see how well you understood all that:</p>
+
+<ul>
+<li>Write a program where you move a small image using the mouse.
+
+<ul>
+<li>Nothing complicated: simply that the image will be in the same position as the mouse.</li>
+<li>You will have to read the mouse position from the event, and use it to set the position to the image.</li>
+<li>If you follow the example from the &quot;Objects&quot; chapter, you should be able to do something like <code>actor.x = event.pos[0]</code>.</li>
+</ul></li>
+</ul>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00900-events-intro/">Previous: Intoduction to events</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/01100-keyboard/">Next: Keyboard events</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

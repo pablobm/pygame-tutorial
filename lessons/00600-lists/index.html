@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Lists, part 1</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Lists, part 1</h1>
+      <p>Chances are that our programs won&#39;t have just one thing to draw, but many. We could have a hundred characters moving around, and we don&#39;t want to write code for each and every one of them. It would be boring and time-consuming.</p>
+
+<p>Fortunately, we can make &quot;lists&quot; of things. When we have lists, we can write code to deal with everything on the list, regardless of whether the list has one item or a thousand.</p>
+
+<h2>A bit of theory: lists</h2>
+
+<p>Start a new program from scratch. Type it as follows:</p>
+
+<p>The words <code>for</code> and <code>in</code> above are special. They create a loop, similar to the ones we have already seen. We use this construct to loop over lists. We could do it with <code>while</code> too, but it&#39;s easier this way.</p>
+
+<ol>
+<li>Run the program. What does it do?</li>
+<li>How does it work?</li>
+<li>Add other items to the list and run the program.</li>
+</ol>
+
+<p>You can use variables when creating a list:</p>
+
+<p>You can even have lists of lists:</p>
+
+<h2>Back to Pygame: moving many things</h2>
+
+<p>Now we are going to use two concepts we just learned:</p>
+
+<ul>
+<li>Objects: to keep together details related to each thing on the screen.</li>
+<li>Lists: to deal with many things at once.</li>
+</ul>
+
+<p>Let&#39;s try again to build a Pygame program from scratch. Start with a blank Python file and write code for each of the following, one at a time:</p>
+
+<ol>
+<li>Import Pygame into the program.</li>
+<li>Define the color black as a constant.</li>
+<li>Initialize Pygame</li>
+<li>Create a screen window and put it in a variable.</li>
+</ol>
+
+<p>So far, it&#39;s all stuff we have done before. Next let&#39;s apply some of what we saw in the chapter about objects:</p>
+
+<ol>
+<li>Define a class <code>Actor</code>.</li>
+<li>Create an actor and put it in the variable <code>actor1</code>.</li>
+<li>Set the <code>x</code> and the <code>y</code> coordinates for the actor. Use any numbers you like.</li>
+<li>Set an image for this actor. Choose any image you like.</li>
+<li>Create a second actor, <code>actor2</code>, with the same image, but different coordinates.</li>
+<li>Create a list <code>actor_list</code> that has both <code>actor1</code> and <code>actor2</code>.</li>
+</ol>
+
+<p>OK so far? Here comes the interesting part. After the code above, write code for the following:</p>
+
+<ol>
+<li>A loop that runs 300 times. Each time it will do all the steps below:
+
+<ol>
+<li>Paint the screen completely black.</li>
+<li>For each actor in <code>actor_list</code>, do the following:
+
+<ol>
+<li>Increase the <code>y</code> coordinate.</li>
+<li>&quot;Blit&quot; the image for the actor on the screen.</li>
+</ol></li>
+<li>&quot;Flip&quot; the screen to update it.</li>
+</ol></li>
+</ol>
+
+<p>Come on, get typing. I&#39;ll wait.</p>
+
+<p>OK, how did it go? If you are having trouble, remember to address one thing at a time. Don&#39;t try to write all at once. Review the previous lessons if you need.</p>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00500-objects/">Previous: Objects</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00650-lists-2/">Next: Lists, part 2</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

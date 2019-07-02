@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Circle and random</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Circle and random</h1>
+      <p>Before we go further, we need to stop again and learn a few things. For the next program, we&#39;ll need some new functions that we haven&#39;t seen before. Let&#39;s see them one by one.</p>
+
+<h2>Drawing circles</h2>
+
+<p>Using Pygame we can draw circles on the screen. This is the code we need to use:</p>
+
+<p>The words <code>screen</code>, <code>color</code>, <code>position</code> and <code>radius</code> are information that we&#39;ll have to provide. This is an example of use:</p>
+
+<p>The code above will draw a white circle with a 10-pixel radius at the position x=100 and y=100. You will have to provide a <code>screen</code> similar to how we have done before. Write a program to try it out. Then try these challenges:</p>
+
+<ol>
+<li>Make the circle red.</li>
+<li>Draw the circle in a different position.</li>
+<li>Draw a larger circle.</li>
+</ol>
+
+<h2>Generating random numbers</h2>
+
+<p>In Python, there are several ways of generating random numbers. Regardless of how we do it, we&#39;ll need to import the <code>random</code> library into our program. Then we can use a function such as the following:</p>
+
+<p>That code will generate a random number between 1 and 10. Here are some challenges:</p>
+
+<ol>
+<li>Print the number on screen.</li>
+<li>Generate a number between 100 and 200.</li>
+</ol>
+
+<h2>Putting it all together</h2>
+
+<p>OK, so now let&#39;s write a program that uses all the above. Write code for each one of the following steps, one by one:</p>
+
+<ol>
+<li>Import the <code>random</code> library.</li>
+<li>Import Pygame.</li>
+<li>Define a class <code>Circle</code>.</li>
+<li>Create an empty list where we&#39;ll put our circles.</li>
+<li>Write a loop that will run 100 times. Each time it will do the following:
+
+<ol>
+<li>Create a <code>Circle</code> object and put it in a variable.</li>
+<li>Give the object a random <code>x</code> coordinate, between 0 and 800.</li>
+<li>Give the object a random <code>y</code> coordinate, between 0 and 600.</li>
+<li>Give the object a random <code>radius</code>, between 5 and 50.</li>
+<li>Add the object to the list of circles.</li>
+</ol></li>
+<li>Initialize Pygame</li>
+<li>Create a window of size 800x600</li>
+<li>Write a loop that, for each object in the list, does the following:
+
+<ol>
+<li>Draw a white circle on the screen, with the coordinates and radius given by the object in the list</li>
+</ol></li>
+<li>Update the screen.</li>
+</ol>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/00650-lists-2/">Previous: Lists, part 2</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/00800-starfield/">Next: Star field</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>

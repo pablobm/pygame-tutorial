@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Keyboard events</title>
+    <link href="/pygame-tutorial/stylesheets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="main-header">
+        <p><a href="/">&#x2196; Back to index</a></p>
+      </div>
+    <div class="main-body">
+      <h1>Keyboard events</h1>
+      <p>Same as with the mouse, when a key is pressed an event is generated: <code>pygame.KEYDOWN</code>. To know which specific key it is, we compare it with the possible options. For example:</p>
+
+<p>This is what the program does:</p>
+
+<ol>
+<li>It loops through every event in the event queue.</li>
+<li>For each event, it checks if it&#39;s a keypress.</li>
+<li>If it&#39;s a keypress, it will check what key it was, asking one possibility at a time:
+
+<ul>
+<li>If it&#39;s the Q key, it closes the program.</li>
+<li>If it&#39;s the left arrow key, it prints &quot;You pressed LEFT&quot;.</li>
+<li>If it&#39;s the right arrow key, it prints &quot;You pressed RIGHT&quot;.</li>
+</ul></li>
+</ol>
+
+<p>Each <code>KEYDOWN</code> event comes with a <code>key</code>, telling which key it was that the player pressed.</p>
+
+<p>Inside <code>pygame</code> there are a bunch of things that represent each key, and we can use to compare. For example, <code>pygame.K_q</code> represents the &#39;Q&#39; key in the keyboard. To know if the player pressed this key, we compare it with <code>event.key</code>, like this: <code>event.key == pygame.K_q</code>. If instead we want to know when the left arrow key was pressed, with compare with <code>pygame.K_LEFT</code>.</p>
+
+<h2>Challenges</h2>
+
+<p>Let&#39;s see how well you understood all that:</p>
+
+<ul>
+<li>Try the example above in your program. Where do you think it goes?</li>
+<li>Add code to the example so that the program closes when either of these things happens:
+
+<ul>
+<li>Q is pressed.</li>
+<li>The player clicks the button to close the window.</li>
+</ul></li>
+<li>Add code to the example so that it prints messages when pressing the up and down arrow keys.</li>
+</ul>
+
+
+      <div class="pagination-links">
+          <p class="pagination-links__prev"><a href="/pygame-tutorial/lessons/01000-events-mouse/">Previous: Mouse events</a></p>
+          <p class="pagination-links__next"><a href="/pygame-tutorial/lessons/01200-keyboard-2/">Next: Keyboard without events</a></p>
+      </div>
+    </div>
+    <footer class="main-footer">
+      <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
+      <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
+      <p>Last updated on <time>2019-07-02</time></p>
+    </footer>
+  </body>
+</html>
