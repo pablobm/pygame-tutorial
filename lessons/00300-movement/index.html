@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Creating movement</h1>
@@ -20,6 +20,12 @@
 <h2>A bit of theory: Loops</h2>
 
 <p>In Python, the word <code>while</code> is used to create a loop. Start a new program from scratch. Type it as follows:</p>
+<div class="highlight"><pre><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+  <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+</pre>
+</div>
 
 <ol>
 <li>Run the program. What does it do?</li>
@@ -60,6 +66,9 @@ Translate each step into a line of code (revisit the previous lessons to remembe
 <p>If you did everything correctly, you should have an image moving across the screen, but leaving a &quot;wake&quot; behind it. How can we avoid this?</p>
 
 <p>The problem here is that we are drawing on top of the previous screen. Instead, we need to make sure that the screen is deleted before we start painting a new frame. You can use the following piece of code, which paints the whole screen black:</p>
+<div class="highlight"><pre><span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre>
+</div>
 
 <p>Where do you think that line should go?</p>
 
@@ -84,7 +93,7 @@ Translate each step into a line of code (revisit the previous lessons to remembe
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Functions</h1>
@@ -22,8 +22,28 @@
 <h2>Repetitive code</h2>
 
 <p>To understand functions, it&#39;s better to go by example. Have a look at this chunk of code from our game:</p>
+<div class="highlight"><pre><span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_DOWN</span><span class="p">]:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_UP</span><span class="p">]:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">5</span>
+</pre>
+</div>
 
 <p>This code checks if specific keys are pressed, and then moves the player horizontally or vertically. It&#39;s a bit difficult to read though. One possible improvement would be to write it like this:</p>
+<div class="highlight"><pre><span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
+    <span class="n">move_x</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+    <span class="n">move_x</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_DOWN</span><span class="p">]:</span>
+    <span class="n">move_y</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_UP</span><span class="p">]:</span>
+    <span class="n">move_y</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>Here we have changed the operations so that now they look like something that can be easier to read: <code>move_x</code> and <code>move_y</code>. But where do those instructions come from?</p>
 
@@ -32,6 +52,10 @@
 <h2>Defining and using functions</h2>
 
 <p>Add this to your program, near the top but after the <code>import</code> lines:</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">move_x</span><span class="p">(</span><span class="n">sprite</span><span class="p">,</span> <span class="n">change</span><span class="p">):</span>
+    <span class="n">sprite</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">sprite</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">change</span>
+</pre>
+</div>
 
 <p>This is an example of a <em>function definition</em>. It reads like follows:</p>
 
@@ -43,8 +67,14 @@
 </ol>
 
 <p>How do we use this? Well, wherever you had something like this:</p>
+<div class="highlight"><pre><span class="n">something</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">something</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">something_else</span>
+</pre>
+</div>
 
 <p>You can now instead write this:</p>
+<div class="highlight"><pre><span class="n">move_x</span><span class="p">(</span><span class="n">something</span><span class="p">,</span> <span class="n">something_else</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>That is called a &quot;function call&quot;. It goes like follows:</p>
 
@@ -63,14 +93,39 @@
 <h2>Reusing functions</h2>
 
 <p>In the example above, the functions <code>move_x</code> and <code>move_y</code> are used twice each. Functions can be used and reused in many locations, as long as they make sense. For example, we can use <code>move_y</code> in the code that moves the stars. Initially, that code looks like this:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">star_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">SCREEN_HEIGHT</span><span class="p">:</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">SCREEN_WIDTH</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">star</span><span class="o">.</span><span class="n">speed</span>
+</pre>
+</div>
 
 <p>Pay attention to the last line. It reads:</p>
+<div class="highlight"><pre><span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">star</span><span class="o">.</span><span class="n">speed</span>
+</pre>
+</div>
 
 <p>This fits the following template:</p>
+<div class="highlight"><pre><span class="n">something</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">something</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">something_else</span>
+</pre>
+</div>
 
 <p>And therefore, it can be rewritten using the function <code>move_y</code>, like this:</p>
+<div class="highlight"><pre><span class="n">move_y</span><span class="p">(</span><span class="n">star</span><span class="p">,</span> <span class="n">star</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>So the code to move the stars ends up reading like this:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">star_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">SCREEN_HEIGHT</span><span class="p">:</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">SCREEN_WIDTH</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">move_y</span><span class="p">(</span><span class="n">star</span><span class="p">,</span> <span class="n">star</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>That reads a little bit better. Not a whole lot better, but it&#39;s definitely an improvement. Step by step we can make the code easier to understand.</p>
 
@@ -79,10 +134,30 @@
 <p>So far, we have created functions that we use in the main body of our code. We can also use functions inside other functions, without limit. Let&#39;s carry on tidying up the code and see what this means.</p>
 
 <p>This is a piece of code that we could make clearer, it moves all the stars down, bringing them back to the top when they touch the bottom:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">star_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">SCREEN_HEIGHT</span><span class="p">:</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">star</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">SCREEN_WIDTH</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">move_y</span><span class="p">(</span><span class="n">star</span><span class="p">,</span> <span class="n">star</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>We can can move it all into a function, pretty much verbatim:</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">move_stars</span><span class="p">(</span><span class="n">star_list</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">star_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">SCREEN_HEIGHT</span><span class="p">:</span>
+            <span class="n">star</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">star</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">SCREEN_WIDTH</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">move_y</span><span class="p">(</span><span class="n">star</span><span class="p">,</span> <span class="n">star</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>And then we simply call it like this:</p>
+<div class="highlight"><pre><span class="n">move_stars</span><span class="p">(</span><span class="n">star_list</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>Make that change to the code. Do you know where the above goes?</p>
 
@@ -102,6 +177,13 @@
 <h2>Was all this worth it?</h2>
 
 <p>If you completed the challenges, you should have a section of code that looks very similar to this:</p>
+<div class="highlight"><pre><span class="n">move_stars</span><span class="p">(</span><span class="n">star_list</span><span class="p">)</span>
+<span class="n">blank_screen</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>
+<span class="n">draw_stars</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">star_list</span><span class="p">)</span>
+<span class="n">draw_sprite</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
+<span class="n">draw_scene</span><span class="p">()</span>
+</pre>
+</div>
 
 <p>This is much easier to read and follow than we had before, and makes the <code>while</code> loop shorter. It may feel like we have swept the code under the carpet, moving it to functions. This is partly true, but now each of the functions is also easier to read and has a clear title (the name of the function) that describes what it&#39;s supposed to do.</p>
 
@@ -115,7 +197,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

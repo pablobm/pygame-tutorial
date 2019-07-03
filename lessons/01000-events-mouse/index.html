@@ -11,13 +11,20 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Mouse events</h1>
       <p>To know when the player is using the mouse, we use events. For example, when the player moves the mouse, an event of type <code>pygame.MOUSEMOTION</code> joins the event queue. It will include useful information, such as its position or what buttons were pressed.</p>
 
 <p>This is an example of use:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">MOUSEMOTION</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;The mouse moved&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;The X position is now&quot;</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;The Y position is now&quot;</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre>
+</div>
 
 <p>This is what the program does:</p>
 
@@ -43,12 +50,20 @@
 <p>Apart from the type, each event will have other things inside, which depend on the type of event. A <code>MOUSEMOTION</code> event has a <code>pos</code>, which is the position of the mouse. This position is represented as a list of two elements: X and Y.</p>
 
 <p>Remember how lists work? This is an example of a list with two elements:</p>
+<div class="highlight"><pre><span class="n">position</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">]</span>
+</pre>
+</div>
 
 <p>We have seen how to loop through a list and do something with each element, but we haven&#39;t seen how to work with a specific element of the list. For example, how to do something only with the first element, or only with the hundredth element. Let&#39;s see that.</p>
 
 <p>Computers have a funny way to count. When people count (for example with their fingers), we start counting at 1, and then go 2, 3, 4... Computers don&#39;t do that: they normally start at 0 and then go 1, 2, 3... This is important now. For a computer, the first element of a list is the element number 0, and the second element is the element number 1. The 100th element is element 99 and so on.</p>
 
 <p>We can read inside a list using square brackets <code>[]</code> and a number, like this:</p>
+<div class="highlight"><pre><span class="n">position</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;The first element is &quot;</span> <span class="o">+</span> <span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;The second element is &quot;</span> <span class="o">+</span> <span class="n">position</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre>
+</div>
 
 <h2>Challenges</h2>
 
@@ -73,7 +88,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

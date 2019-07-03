@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Python basics</h1>
@@ -31,6 +31,9 @@
 <p>In a program, there&#39;s the concept of &quot;comments&quot;. Comments are not really code. They are parts of the program where we write something down in plain English, to help us or others understand what&#39;s going on.</p>
 
 <p>In Python, comments start with a hash character <code>#</code>. This is an example:</p>
+<div class="highlight"><pre><span class="c"># This will be ignored by the program</span>
+</pre>
+</div>
 
 <p>You will see comments in the examples here. They are there only to guide you and don&#39;t have any special meaning.</p>
 
@@ -49,16 +52,38 @@
 </ul>
 
 <p>This is an example of variable:</p>
+<div class="highlight"><pre><span class="n">energy</span> <span class="o">=</span> <span class="mi">100</span>
+</pre>
+</div>
 
 <p>The code above creates a variable. We called it <code>energy</code> and decided its value was going to be 100. We could have called it anything else, or given it a different value (a different number).</p>
 
 <p>Variables can have almost any name we can think of, with some restrictions. One restriction is that they cannot have spaces. It&#39;s possible to use underscores to have multiple words though:</p>
+<div class="highlight"><pre><span class="n">player_energy</span> <span class="o">=</span> <span class="mi">100</span>
+</pre>
+</div>
 
 <p>You can do math with variables. If the initial energy is 100 and an arrow takes 20 units from you, you could do this:</p>
+<div class="highlight"><pre><span class="n">player_energy</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">20</span>
+</pre>
+</div>
 
 <p>We give descriptive names to variables to help us remember what&#39;s going on in the program. We can use variables in our math to get something like this:</p>
+<div class="highlight"><pre><span class="n">initial_energy</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">arrow_damage</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">player_energy</span> <span class="o">=</span> <span class="n">initial_energy</span> <span class="o">-</span> <span class="n">arrow_damage</span>
+</pre>
+</div>
 
 <p>Finally, they are called &quot;variables&quot; because they change. The game is more likely to go like this:</p>
+<div class="highlight"><pre><span class="n">initial_energy</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">arrow_damage</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">player_energy</span> <span class="o">=</span> <span class="n">initial_energy</span>
+<span class="c"># ... each time we get hit by an arrow ...</span>
+<span class="n">player_energy</span> <span class="o">=</span> <span class="n">player_energy</span> <span class="o">-</span> <span class="n">arrow_damage</span>
+</pre>
+</div>
 
 <p>In the code above, the variable <code>player_energy</code> started as 100, then changed to 80.</p>
 
@@ -72,18 +97,34 @@
 <p>Variables store data, but they don&#39;t do anything. To do stuff we use functions.</p>
 
 <p>This is an example of a function being used:</p>
+<div class="highlight"><pre><span class="k">print</span><span class="p">()</span>
+</pre>
+</div>
 
 <p>The function is <code>print</code>, and we use it by writing parentheses (round brackets) after it.</p>
 
 <p><code>print</code> is used to show things on a terminal screen. In the example above we don&#39;t actually show anything, because we are not telling <code>print</code> what so show.</p>
 
 <p>Functions use data. If we give data to <code>print</code>, it will print it out. The following program prints number 10 on the terminal:</p>
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>The program tells the function <code>print</code> to use number 10. In programmer&#39;s lingo, we say that we pass <code>10</code> to the function, and that the function &quot;receives&quot; <code>10</code>. We can also use variables, or do math:</p>
+<div class="highlight"><pre><span class="n">energy</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">print</span><span class="p">(</span><span class="n">energy</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">energy</span> <span class="o">-</span> <span class="mi">20</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>Write the program above and run it. What does it do?</p>
 
 <p>Functions can take more than one piece of data. Here we print two numbers:</p>
+<div class="highlight"><pre><span class="n">initial_energy</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">current_energy</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="k">print</span><span class="p">(</span><span class="n">initial_energy</span><span class="p">,</span> <span class="n">current_energy</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>When passing more than one piece of data to a function, we use a comma <code>,</code> to separate them.</p>
 
@@ -92,10 +133,18 @@
 <p>Libraries are collections of functions that we can use in our programs. Python comes bundled with many libraries, and we can download more or even create them ourselves.</p>
 
 <p>To use a library, we use the special word <code>import</code>. When we import a library, it is read from the hard disk and loaded in memory. Here we import a library called <code>math</code>:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">math</span>
+</pre>
+</div>
 
 <p>The library <code>math</code> comes included with Python, and has functions to do complex math.</p>
 
 <p>When we import a library, a variable of the same name is created on our project. For example, we imported <code>math</code>, so we get a variable called <code>math</code>. Inside this variable, we can find functions. To look inside a variable, we use the full stop symbol <code>.</code>. This example uses a function to calculate the factorial of 10:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>Some things happening here:</p>
 
@@ -109,6 +158,10 @@
 </ul>
 
 <p>Another example, a bit more complicated:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre>
+</div>
 
 <p>More notes on that:</p>
 
@@ -139,7 +192,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

@@ -11,13 +11,18 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Keyboard without events</h1>
       <p>There are actually two different ways of checking if the player is pressing keys. One is with events, as we have seen. We&#39;ll see the second one next.</p>
 
 <p>The function <code>pygame.key.get_pressed()</code> will get us a list of all keys that are pressed at the time. We use it like this:</p>
+<div class="highlight"><pre><span class="n">keys</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">&quot;The LEFT arrow is pressed&quot;</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>This is how the above works:</p>
 
@@ -55,7 +60,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

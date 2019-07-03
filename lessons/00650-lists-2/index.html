@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Lists, part 2</h1>
@@ -20,6 +20,11 @@
 <h2>A bit of theory: adding items to lists</h2>
 
 <p>We can add elements to a list during the program, using the function <code>append</code>, which lives inside lists. For example, try the following program:</p>
+<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre>
+</div>
 
 <ol>
 <li>What does this program do?</li>
@@ -27,6 +32,14 @@
 </ol>
 
 <p>We can create long lists using loops. For example, type this program:</p>
+<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+  <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+  <span class="n">count</span> <span class="o">+=</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre>
+</div>
 
 <ol>
 <li>What does this program do?</li>
@@ -55,7 +68,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

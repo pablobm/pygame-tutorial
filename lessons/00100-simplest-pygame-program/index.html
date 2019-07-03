@@ -11,19 +11,33 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>The simplest possible Pygame program</h1>
       <p>Let&#39;s put in practice what we have learned. We are going to use the Pygame library. Pygame has functions to deal with graphics, sounds, keyboard, etc. It allows us to build games using Python.</p>
 
 <p>First we need to import Pygame into our program. As we have seen before, we do it like this:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pygame</span>
+</pre>
+</div>
 
 <p>The next step is to tell pygame to get started, as this doesn&#39;t happen until we say so. For this, we use the <code>init</code> function inside <code>pygame</code>:</p>
+<div class="highlight"><pre><span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+</pre>
+</div>
 
 <p>Finally, we create a window where we can display our game. When we do this, we have to specify what size of window we have. A typical window size is 800 pixels wide and 600 pixels high. We would do it like this:</p>
+<div class="highlight"><pre><span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">([</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
+</pre>
+</div>
 
 <p>This is the complete program:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">([</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
+</pre>
+</div>
 
 <h2>Questions</h2>
 
@@ -42,7 +56,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Circle and random</h1>
@@ -20,8 +20,15 @@
 <h2>Drawing circles</h2>
 
 <p>Using Pygame we can draw circles on the screen. This is the code we need to use:</p>
+<div class="highlight"><pre><span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>The words <code>screen</code>, <code>color</code>, <code>position</code> and <code>radius</code> are information that we&#39;ll have to provide. This is an example of use:</p>
+<div class="highlight"><pre><span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">([</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">],</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>The code above will draw a white circle with a 10-pixel radius at the position x=100 and y=100. You will have to provide a <code>screen</code> similar to how we have done before. Write a program to try it out. Then try these challenges:</p>
 
@@ -34,6 +41,9 @@
 <h2>Generating random numbers</h2>
 
 <p>In Python, there are several ways of generating random numbers. Regardless of how we do it, we&#39;ll need to import the <code>random</code> library into our program. Then we can use a function such as the following:</p>
+<div class="highlight"><pre><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>That code will generate a random number between 1 and 10. Here are some challenges:</p>
 
@@ -79,7 +89,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

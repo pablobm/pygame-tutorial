@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Objects</h1>
@@ -30,6 +30,14 @@
 <p>When things have several qualities, it&#39;s useful to store them together. This becomes helpful later as it makes it easier to know what belongs to what. In many programming languages, we have &quot;objects&quot; that help us do exactly that.</p>
 
 <p>Start a new, blank program and type the following:</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+<span class="n">s</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Ash&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span>
+</pre>
+</div>
 
 <p>The two first lines define a new &quot;class&quot; of &quot;objects&quot;. You can read it as &quot;some things in this program are going to be &#39;students&#39;&quot;. It may sound a bit weird, but it&#39;ll be useful later. Don&#39;t worry too much, you don&#39;t have to understand it completely.</p>
 
@@ -44,6 +52,13 @@
 <p>This is not very different from creating variables for names and ages as we have done before. The thing that is different is that <code>name</code> and <code>age</code> are going to live inside <code>s</code>. We&#39;ll use the dot <code>.</code> symbol to read and write the student&#39;s name and age.</p>
 
 <p>Using the dot <code>.</code> symbol, we can access the name and age, same as we do with any other variable. For example, add this to the program:</p>
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;My name is&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;and I am&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;years old&quot;</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>So nothing new. Only that now we are putting variables inside other variables to help us organise the program better. There&#39;s a lot more that can be done with objects, but we can do just with this for the moment.</p>
 
@@ -81,7 +96,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

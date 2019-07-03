@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Drawing something on the screen</h1>
@@ -22,8 +22,14 @@
 <p>At the moment, the program opens an window and closes it immediately. We should make the window stay open for a bit first.</p>
 
 <p>To make Python wait a bit before ending, we need to load a library that gives us that ability. The one we need now is called <code>time</code>, and includes code to help us deal with time. We can import it like this:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
+</pre>
+</div>
 
 <p>Inside the <code>time</code> library, there&#39;s a function called <code>sleep</code>. This function makes the program stop for a number of seconds. For example, to stop the program for 5 seconds, you would do this:</p>
+<div class="highlight"><pre><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre>
+</div>
 
 <h2>Challenge</h2>
 
@@ -37,12 +43,18 @@
 <p>It&#39;s time to draw an image on the screen. Find an image you would like to draw, and put the file in the same folder as the code.</p>
 
 <p>First we need to get hold of the screen. When we create a screen (a window) with <code>set_mode</code>, the function &quot;returns&quot; a screen. This means we can create a variable and store the screen there. <strong>Modify</strong> the existing code to do this when it creates the window:</p>
+<div class="highlight"><pre><span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">([</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
+</pre>
+</div>
 
 <p>The function <code>set_mode</code> (which lives inside <code>display</code>, which in turn lives inside <code>pygame</code>) returns a result. We use the <code>=</code> symbol to give a name to this result. In this case, the result is an &quot;object&quot; that represents the screen. We call it <code>screen</code>, but we could have given it any other name. The important thing is that we give it a name that is easy to remember later.</p>
 
 <h2>Loading the image</h2>
 
 <p>Next, we have to load the image and give it a name too. This is the line for that:</p>
+<div class="highlight"><pre><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;my-image.png&quot;</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>In this example, the image file is called <code>my-image.png</code>. It will be different for you. Make sure to type the name of the file you want to load.</p>
 
@@ -56,6 +68,9 @@
 </ol>
 
 <p>Now we draw the image on the screen. To do this, we use the function <code>blit</code>, which lives inside the object that we called <code>screen</code>:</p>
+<div class="highlight"><pre><span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre>
+</div>
 
 <p>&quot;Blit&quot; is a technical term, don&#39;t worry too much about the funny word. What it means here is &quot;draw the thing we called <code>image</code> on the thing we called <code>screen</code>&quot;.</p>
 
@@ -64,6 +79,9 @@
 <p>There&#39;s one last hitch. Pygame doesn&#39;t show things on screen as you draw them. Instead it waits until you tell it to do it. This can be a bit annoying at first, but it is much faster because it allows the computer to do less work.</p>
 
 <p>Once you have drawn the image on the screen, you tell Pygame that the screen is ready by running this code:</p>
+<div class="highlight"><pre><span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+</pre>
+</div>
 
 <h2>Challenges</h2>
 
@@ -82,7 +100,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

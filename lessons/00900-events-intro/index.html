@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Intoduction to events</h1>
@@ -30,6 +30,10 @@
 <p>Events happen all the time while the program is running. They accumulate in a queue waiting for us to check them. Because there can be several events waiting for us, we need a loop to deal with each and every one of them before we carry on drawing the scene.</p>
 
 <p>This is the simplest loop to deal with events:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+  <span class="c"># deal with `event` here</span>
+</pre>
+</div>
 
 <p>This is what the codes does:</p>
 
@@ -39,6 +43,11 @@
 </ul>
 
 <p>Here&#39;s a useful example. The following snippet of code closes the program when the user clicks the &quot;close&quot; button on the window:</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+  <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>So how does this work? This is what each line of code is doing:</p>
 
@@ -59,7 +68,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>

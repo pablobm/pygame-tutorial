@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="main-header">
-        <p><a href="/">&#x2196; Back to index</a></p>
+        <p><a href="/pygame-tutorial">&#x2196; Back to index</a></p>
       </div>
     <div class="main-body">
       <h1>Lists, part 1</h1>
@@ -22,6 +22,13 @@
 <h2>A bit of theory: lists</h2>
 
 <p>Start a new program from scratch. Type it as follows:</p>
+<div class="highlight"><pre><span class="n">many_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">many_things</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="n">many_things</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">thing</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>The words <code>for</code> and <code>in</code> above are special. They create a loop, similar to the ones we have already seen. We use this construct to loop over lists. We could do it with <code>while</code> too, but it&#39;s easier this way.</p>
 
@@ -32,8 +39,25 @@
 </ol>
 
 <p>You can use variables when creating a list:</p>
+<div class="highlight"><pre><span class="n">some_number</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">many_things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">some_number</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">many_things</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="n">many_things</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">thing</span><span class="p">)</span>
+</pre>
+</div>
 
 <p>You can even have lists of lists:</p>
+<div class="highlight"><pre><span class="n">some_number</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">first_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">some_number</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">second_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">first_list</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">second_list</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="n">second_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">thing</span><span class="p">)</span>
+</pre>
+</div>
 
 <h2>Back to Pygame: moving many things</h2>
 
@@ -94,7 +118,7 @@
     <footer class="main-footer">
       <p>A work in progress by <a href="http://www.pablobm.com">Pablo Brasero Moreno</a></p>
       <p>Source code at <a href="https://github.com/pablobm/pygame-tutorial">http://github.com/pablobm/pygame-tutorial</a></p>
-      <p>Last updated on <time>2019-07-02</time></p>
+      <p>Last updated on <time>2019-07-03</time></p>
     </footer>
   </body>
 </html>
