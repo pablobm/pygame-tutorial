@@ -736,11 +736,11 @@ code {
   .pagination-links__prev {
     float: left; }
     .pagination-links__prev a::before {
-      content: "\2190"; }
+      content: "\2190\00a0"; }
   .pagination-links__next {
     float: right; }
     .pagination-links__next a::after {
-      content: "\2192"; }
+      content: "\00a0\2192"; }
 
 .highlight pre {
   background: transparent; }
