@@ -5,7 +5,8 @@
     float: left;
 
     & a::before {
-      content: "\2190";
+      // Left arrow, nbsp
+      content: "\2190\00a0";
     }
   }
 
@@ -13,7 +14,8 @@
     float: right;
 
     & a::after {
-      content: "\2192";
+      // Nbsp, right arrow
+      content: "\00a0\2192";
     }
   }
 }
